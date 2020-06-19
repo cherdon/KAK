@@ -1,0 +1,36 @@
+{
+  "navbar_top_header": [
+      {"name": "Home",
+      "link": "#"},
+      {"name": "Marketplace",
+      "link": "#"},
+      {"name": "Forum",
+      "link": "#"},
+      {"name": "About Us",
+      "link": "#"},
+      {"name": "Blog",
+      "link": "#"},
+      {"name": "Contact Us",
+      "link": "#"}
+  ],
+  "navbar_more_settings":
+    {"Social":
+      [
+        "Profile Info",
+        "Notifications",
+        "Messages",
+        "Friend Requests"
+      ],
+      "Account": [
+        "Account Info",
+        "Change Password",
+        "General Settings"
+      ],
+      "Store Settings": [
+        "My Account",
+        "Sales Statements",
+        "Manage Items",
+        "Downloads"
+      ]
+    }
+}

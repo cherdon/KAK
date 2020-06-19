@@ -1,4 +1,9 @@
 import os
+import json
+
+interface_file = os.path.join(os.path.dirname(__file__), 'interface.json')
+with open(interface_file, 'r') as outfile:
+    interface = json.load(outfile)
 
 
 class Config(object):
@@ -11,3 +16,4 @@ class Config(object):
     # User Interface
     TEMPLATE_PATH = os.path.join(os.path.dirname(__file__), 'templates')
     STATIC_PATH = os.path.join(os.path.dirname(__file__), 'static')
+    INTERFACE = interface
