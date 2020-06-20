@@ -1,4 +1,4 @@
-from applets import app, sql
+from applets import app
 from flask import request, render_template, redirect, url_for, flash
 interface = app.config['INTERFACE']
 stores = app.config['STOREDB']
@@ -77,65 +77,21 @@ def store(name):
 
 
 # Product
-# @app.route('/product/<name>', methods=['GET'])
-# def product(name):
-#     # Python functions
-#     images = ["img/marketplace/items/10.jpg", "img/marketplace/items/15.jpg", "img/marketplace/items/16.jpg", "img/marketplace/items/17.jpg", "img/marketplace/items/18.jpg", "img/marketplace/items/19.jpg"]
-#     details = [
-#         {"Allergens": "May contain nuts",
-#          "Validity": "Consume in 10 days"}
-#     ]
-#     description = [
-#         {"type": "title",
-#          "value": "This is the title attracting factor"},
-#         {"type": "text",
-#          "value": "This product will be great hehe"},
-#         {"type": "text",
-#          "value": "This product will be great hehe"}
-#     ]
-#     inclusive = [
-#         "Taadaa",
-#         "Feature 2",
-#         "Feature 10"
-#     ]
-#     return render_template('product.html',
-#                            interface=interface,
-#                            images=images,
-#                            details=details,
-#                            description=description,
-#                            inclusive=inclusive,
-#                            title="Product")
+@app.route('/product/<name>', methods=['GET'])
+def product(name):
+    # Python functions
+    inclusive = [
+        "Products made with love, provided by KAKtus!"
+    ]
 
-def split_detail(string):
-    details = {}
-    items = string.split(".")
-    for item in items:
-        [key, value] = item.split(',')
-        details[key] = value
-    return details
-
-
-@app.route('/product/<id>', methods=['GET'])
-def product(id):
-    cur = sql.start_conn()
-    product = sql.get_product(cur, id)
-    if product:
-        product['detail'] = split_detail(product['detail'])
-        category = sql.get_category(cur, product['category_id'])
-        images = sql.get_product_images(cur, id)
-        store = sql.get_store(cur, product['maker_id'])
-
-        # print(name)
-        # filtered = list(filter(lambda item: str(item['id']) == id, items['items']))
-        # print(filtered)
+    filtered = list(filter(lambda item: str(item['id']) == name, items['items']))
+    if filtered:
         return render_template('product.html',
                                interface=interface,
-                               images=images,
-                               store=store,
-                               # item=filtered[0],
-                               product=product,
-                               category=category,
+                               item=filtered[0],
+                               inclusive=inclusive,
                                title="Product")
+
     else:
         return redirect(url_for('error'))
 
@@ -153,7 +109,9 @@ def forum():
 @app.route('/category/<name>', methods=['GET'])
 def category(name):
     # Python functions
-
+    filtered = list(filter(lambda item: str(item['cat']) == name, items['items']))
     return render_template('category.html',
                            interface=interface,
+                           items=filtered,
+                           store=stores,
                            title="Category")
