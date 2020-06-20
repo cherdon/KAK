@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- bootstrap 4.3.1 -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-  <!-- styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.min.css') }}">
-  <!-- simplebar styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/simplebar.css') }}">
-  <!-- favicon -->
-  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-  <title>Karen | Marketplace</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--    &lt;!&ndash; bootstrap 4.3.1 &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">-->
+<!--    &lt;!&ndash; styles &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.min.css') }}">-->
+<!--    &lt;!&ndash; simplebar styles &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/simplebar.css') }}">-->
+
+    {% block css %}
+    {% endblock %}
+
+    <!-- favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <title>Karen | {{ title }}</title>
 </head>
 <body>
 
@@ -58,7 +62,7 @@
   <!-- NAVIGATION WIDGET -->
 <!--  <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">-->
 <!--    &lt;!&ndash; USER AVATAR &ndash;&gt;-->
-<!--    <a class="user-avatar small no-outline online" href="profile-timeline.html">-->
+<!--    <a class="user-avatar small no-outline online" href="profile.html">-->
 <!--      &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
 <!--      <div class="user-avatar-content">-->
 <!--        &lt;!&ndash; HEXAGON &ndash;&gt;-->
@@ -266,7 +270,7 @@
 <!--    &lt;!&ndash; USER SHORT DESCRIPTION &ndash;&gt;-->
 <!--    <div class="user-short-description">-->
 <!--      &lt;!&ndash; USER SHORT DESCRIPTION AVATAR &ndash;&gt;-->
-<!--      <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">-->
+<!--      <a class="user-short-description-avatar user-avatar medium" href="profile.html">-->
 <!--        &lt;!&ndash; USER AVATAR BORDER &ndash;&gt;-->
 <!--        <div class="user-avatar-border">-->
 <!--          &lt;!&ndash; HEXAGON &ndash;&gt;-->
@@ -326,7 +330,7 @@
 <!--      &lt;!&ndash; /USER SHORT DESCRIPTION AVATAR &ndash;&gt;-->
 
 <!--      &lt;!&ndash; USER SHORT DESCRIPTION TITLE &ndash;&gt;-->
-<!--      <p class="user-short-description-title"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--      <p class="user-short-description-title"><a href="profile.html">Marina Valentine</a></p>-->
 <!--      &lt;!&ndash; /USER SHORT DESCRIPTION TITLE &ndash;&gt;-->
 
 <!--      &lt;!&ndash; USER SHORT DESCRIPTION TEXT &ndash;&gt;-->
@@ -585,7 +589,7 @@
 <!--      &lt;!&ndash; NAVIGATION WIDGET INFO &ndash;&gt;-->
 <!--      <div class="navigation-widget-info">-->
 <!--        &lt;!&ndash; USER AVATAR &ndash;&gt;-->
-<!--        <a class="user-avatar small no-outline" href="profile-timeline.html">-->
+<!--        <a class="user-avatar small no-outline" href="profile.html">-->
 <!--          &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
 <!--          <div class="user-avatar-content">-->
 <!--            &lt;!&ndash; HEXAGON &ndash;&gt;-->
@@ -637,7 +641,7 @@
 <!--        &lt;!&ndash; /USER AVATAR &ndash;&gt;-->
 
 <!--        &lt;!&ndash; NAVIGATION WIDGET INFO TITLE &ndash;&gt;-->
-<!--        <p class="navigation-widget-info-title"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--        <p class="navigation-widget-info-title"><a href="profile.html">Marina Valentine</a></p>-->
 <!--        &lt;!&ndash; /NAVIGATION WIDGET INFO TITLE &ndash;&gt;-->
 
 <!--        &lt;!&ndash; NAVIGATION WIDGET INFO TEXT &ndash;&gt;-->
@@ -3445,27 +3449,9 @@
   {% block page_content %}
   {% endblock %}
 
-<!-- app -->
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
-<!-- page loader -->
-<script src="{{ url_for('static', filename='js/page-loader.js') }}"></script>
-<!-- simplebar -->
-<script src="{{ url_for('static', filename='js/simplebar.min.js') }}"></script>
-<!-- liquidify -->
-<script src="{{ url_for('static', filename='js/liquidify.js') }}"></script>
-<!-- XM_Plugins -->
-<script src="{{ url_for('static', filename='js/xm_plugins.min.js') }}"></script>
-<!-- global.hexagons -->
-<script src="{{ url_for('static', filename='js/global.hexagons.js') }}"></script>
-<!-- global.tooltips -->
-<script src="{{ url_for('static', filename='js/global.tooltips.js') }}"></script>
-<!-- header -->
-<script src="{{ url_for('static', filename='js/header.js') }}"></script>
-<!-- sidebar -->
-<script src="{{ url_for('static', filename='js/sidebar.js') }}"></script>
-<!-- form.utils -->
-<script src="{{ url_for('static', filename='js/form.utils.js') }}"></script>
-<!-- SVG icons -->
-<script src="{{ url_for('static', filename='js/svg-loader.js') }}"></script>
+
+{% block js %}
+{% endblock %}
+
 </body>
 </html>

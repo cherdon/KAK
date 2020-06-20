@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
+{% block css %}
+  {% for stylesheet in interface['css']['marketplace'] %}
+      <link rel="stylesheet" href="{{ url_for('static', filename=stylesheet) }}">
+  {% endfor %}
+{% endblock %}
+
 {% block page_content %}
   <div class="content-grid">
     <!-- SECTION BANNER -->
@@ -1498,4 +1504,10 @@
     </div>
     <!-- /GRID -->
   </div>
+{% endblock %}
+
+{% block js %}
+  {% for script in interface['js']['marketplace'] %}
+    <script src="{{ url_for('static', filename=script) }}"></script>
+  {% endfor %}
 {% endblock %}
