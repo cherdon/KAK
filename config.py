@@ -17,7 +17,7 @@ with open(item_file, 'r') as outfile:
 class Config(object):
     # Flask Framework
     HOST = '0.0.0.0'
-    PORT = 5080
+    PORT = 8000
     DEBUG = True
     SECRET_KEY = '1234'
 
