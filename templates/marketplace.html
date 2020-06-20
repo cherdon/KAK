@@ -170,7 +170,7 @@
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">{{ item['title'] }}</a></p>
+          <p class="product-preview-title"><a href="/product/{{ item['id'] }}">{{ item['title'] }}</a></p>
           <!-- /PRODUCT PREVIEW TITLE -->
 
           <!-- PRODUCT PREVIEW CATEGORY -->
@@ -188,7 +188,7 @@
           <!-- PRODUCT PREVIEW AUTHOR -->
           <div class="product-preview-author">
             <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+            <a class="product-preview-author-image user-avatar micro no-border" href="/store/{{ item['shop_id'] }}">
               <!-- USER AVATAR CONTENT -->
               <div class="user-avatar-content">
                 <!-- HEXAGON -->
@@ -204,7 +204,7 @@
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">{{ store[ item['shop_id'] | string]['name'] }}</a></p>
+            <p class="product-preview-author-text"><a href="/store/{{ item['shop_id'] }}">{{ store[ item['shop_id'] | string]['name'] }}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->

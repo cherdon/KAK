@@ -58,9 +58,9 @@ def get_product_images(cur, id):
     return images
 
 
-conn = start_conn()
-product = get_product_images(conn, 1)
-print(product)
+# conn = start_conn()
+# product = get_product_images(conn, 1)
+# print(product)
 
 # cursor.execute("SELECT TOP (1000) * FROM [dbo].[map_product_image]")
 # row = cursor.fetchone()

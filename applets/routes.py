@@ -1,4 +1,4 @@
-from applets import app
+from applets import app, sql
 from flask import request, render_template, redirect, url_for, flash
 interface = app.config['INTERFACE']
 stores = app.config['STOREDB']
@@ -76,20 +76,37 @@ def store(name):
         return redirect(url_for('error'))
 
 
-# Product
-@app.route('/product/<name>', methods=['GET'])
-def product(name):
-    # Python functions
-    inclusive = [
-        "Products made with love, provided by KAKtus!"
-    ]
+def split_detail(string):
+    details = {}
+    items = string.split(".")
+    for item in items:
+        if len(item.split(',')) > 1:
+            [key, value] = item.split(',')
+            details[key] = value
+    return details
 
-    filtered = list(filter(lambda item: str(item['id']) == name, items['items']))
-    if filtered:
+
+# Product
+@app.route('/product/<id>', methods=['GET'])
+def product(id):
+    cur = sql.start_conn()
+    product = sql.get_product(cur, id)
+    if product:
+        product['detail'] = split_detail(product['detail'])
+        category = sql.get_category(cur, product['category_id'])
+        images = sql.get_product_images(cur, id)
+        store = sql.get_store(cur, product['maker_id'])
+
+        # print(name)
+        # filtered = list(filter(lambda item: str(item['id']) == id, items['items']))
+        # print(filtered)
         return render_template('product.html',
                                interface=interface,
-                               item=filtered[0],
-                               inclusive=inclusive,
+                               images=images,
+                               store=store,
+                               # item=filtered[0],
+                               product=product,
+                               category=category,
                                title="Product")
 
     else:

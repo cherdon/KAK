@@ -1,7 +1,7 @@
 {
   "navbar_top_header": [
       {"name": "Home",
-      "link": "#"},
+      "link": "/login"},
       {"name": "Marketplace",
       "link": "/marketplace"},
       {"name": "Forum",
