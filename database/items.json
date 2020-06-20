@@ -2,6 +2,7 @@
   "items": [
     {
       "id": 1,
+      "shop_id": 2,
       "shop_name": "The Donnut Shop",
       "title": "Pink Frosted Donut",
       "caption": "Homer Simpson's classic favourite",
@@ -25,6 +26,7 @@
     },
     {
       "id": 2,
+      "shop_id": 2,
       "shop_name": "The Donnut Shop",
       "title": "Cinnamon Donut",
       "caption": "Light and fluffy donuts with a touch of sweet cinnamon sugar",
@@ -40,8 +42,7 @@
       }],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/cinnamon-donut.jpg",
-        "img/marketplace/items/pineapple-tarts.jpg"
+        "img/marketplace/items/cinnamon-donut.jpg"
       ],
       "details": [
         {"Shelf life": "Best consumed within 3 days"}
@@ -49,6 +50,7 @@
     },
     {
       "id": 3,
+      "shop_id": 2,
       "shop_name": "The Donnut Shop",
       "title": "Tiramisu Donut",
       "caption": "Modern twist on the Italian classic",
@@ -64,8 +66,7 @@
       }],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/tiramisu-donut.jpg",
-        "img/marketplace/items/pineapple-tarts.jpg"
+        "img/marketplace/items/tiramisu-donut.jpg"
       ],
       "details": [
         {"Shelf life": "Best consumed within 3 days"}
@@ -73,6 +74,7 @@
     },
     {
       "id": 4,
+      "shop_id": 4,
       "shop_name": "Sweet and Sassy",
       "title": "Valentine's Surprise",
       "caption": "A sweet surprise for your special someone",
@@ -104,6 +106,7 @@
     },
     {
       "id": 5,
+      "shop_id": 4,
       "shop_name": "Sweet and Sassy",
       "title": "The Unicorn",
       "caption": "Cute unicorn cake that anyone can enjoy",
@@ -125,7 +128,7 @@
       ],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/the-unicorn.jpg",
+        "img/marketplace/items/the-unicorn1.jpg",
         "img/marketplace/items/the-unicorn2.jpg"
       ],
       "details": [
@@ -135,6 +138,7 @@
     },
     {
       "id": 6,
+      "shop_id": 4,
       "shop_name": "Sweet and Sassy",
       "title": "Poached Pear Cake",
       "caption": "Best-selling original pear flavoured cake created by our talented bakers",
@@ -156,7 +160,7 @@
       ],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/poached-pear-cake.jpg",
+        "img/marketplace/items/poached-pear-cake1.jpg",
         "img/marketplace/items/poached-pear-cake2.jpg"
       ],
       "details": [
@@ -166,6 +170,7 @@
     },
     {
       "id": 7,
+      "shop_id": 4,
       "shop_name": "Sweet and Sassy",
       "title": "Caramel Latte Cake",
       "caption": "Back by popular demand, our Fathers' Day special is now a permanent menu item",
@@ -197,6 +202,7 @@
     },
     {
       "id": 8,
+      "shop_id": 3,
       "shop_name": "The Long table",
       "title": "Codfish out of Water",
       "caption": "Pan-seared cod fillets with a side of cauliflower puree",
@@ -222,6 +228,7 @@
     },
     {
       "id": 9,
+      "shop_id": 3,
       "shop_name": "The Long table",
       "title": "Hungarian Pork",
       "caption": "Honey Hungarian pork garnished with rocket over a bed of rock salt",
@@ -247,6 +254,7 @@
     },
     {
       "id": 10,
+      "shop_id": 3,
       "shop_name": "The Long table",
       "title": "Pine Nut Pasta",
       "caption": "Pine nut pasta stirred with fresh feta cheese",
@@ -272,6 +280,7 @@
     },
     {
       "id": 11,
+      "shop_id": 1,
       "shop_name": "Jumkey",
       "title": "Custom Earrings",
       "caption": "Aana Silver Plated Floral Design Hanging Pink And Green Color Enamel Painted Silver Beads Dangler Earring",
@@ -299,6 +308,7 @@
     },
     {
       "id": 12,
+      "shop_id": 1,
       "shop_name": "Jumkey",
       "title": "Custom Earrings",
       "caption": "Avismaya Gold Plated Multicolor Moon Stone Dangler Earring",
@@ -326,6 +336,7 @@
     },
     {
       "id": 13,
+      "shop_id": 1,
       "shop_name": "Jumkey",
       "title": "Custom Earrings",
       "caption": "Gold Plated Pink Color Straight Vine Beaded Tassel Design Dangler Earrings By Cippele",
@@ -354,6 +365,7 @@
     },
     {
       "id": 14,
+      "shop_id": 5,
       "shop_name": "Dust and pearls",
       "title": "Fabric Face Mask",
       "caption": "Hand sewn face masks made at home!",

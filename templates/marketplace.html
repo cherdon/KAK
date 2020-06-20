@@ -156,7 +156,7 @@
       <!--PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
+        <a href="/product/{{ item['id'] }}">
           <figure class="product-preview-image liquid">
             <img src="{{ url_for('static', filename=item['images'][0]) }}" alt="item-01">
           </figure>

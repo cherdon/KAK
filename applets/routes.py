@@ -106,29 +106,19 @@ def store(name):
 @app.route('/product/<name>', methods=['GET'])
 def product(name):
     # Python functions
-    # item = items['items']
-
-    # images = ["img/marketplace/items/10.jpg", "img/marketplace/items/15.jpg", "img/marketplace/items/16.jpg", "img/marketplace/items/17.jpg", "img/marketplace/items/18.jpg", "img/marketplace/items/19.jpg"]
-    # details = [
-    #     {"Allergens": "May contain nuts",
-    #      "Validity": "Consume in 10 days"}
-    # ]
-
     inclusive = [
         "Taadaa",
         "Feature 2",
         "Feature 10"
     ]
 
-    print(name)
+    # print(name)
     filtered = list(filter(lambda item: str(item['id']) == name, items['items']))
-    print(filtered)
+    # print(filtered)
     if filtered:
         return render_template('product.html',
                                interface=interface,
                                item=filtered[0],
-                               # details=details,
-                               # description=description,
                                inclusive=inclusive,
                                title="Product")
 
@@ -149,7 +139,7 @@ def forum():
 @app.route('/category/<name>', methods=['GET'])
 def category(name):
     # Python functions
+
     return render_template('category.html',
                            interface=interface,
-                           category_name=name,
                            title="Category")
