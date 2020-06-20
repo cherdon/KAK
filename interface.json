@@ -32,5 +32,27 @@
         "Manage Items",
         "Downloads"
       ]
-    }
+    },
+  "css": {
+    "marketplace": [
+      "css/bootstrap.min.css", "css/styles.min.css", "css/simplebar.css"
+    ],
+    "profile": [
+      "css/bootstrap.min.css", "css/styles.min.css", "css/simplebar.css", "css/tiny-slider.css"
+    ],
+    "store": [
+      "css/bootstrap.min.css", "css/styles.min.css", "css/simplebar.css", "css/tiny-slider.css"
+    ]
+  },
+  "js": {
+    "marketplace": [
+      "js/app.js", "js/page-loader.js", "js/simplebar.min.js", "js/liquidify.js", "js/xm_plugins.min.js", "js/global.hexagons.js", "js/global.tooltips.js", "js/header.js", "js/sidebar.js", "js/form.utils.js", "js/svg-loader.js"
+    ],
+    "profile": [
+      "js/app.js", "js/page-loader.js", "js/simplebar.min.js", "js/liquidify.js", "js/xm_plugins.min.js", "js/tiny-slider.min.js", "js/global.hexagons.js", "js/global.tooltips.js", "js/global.popups.js", "js/header.js", "js/sidebar.js", "js/content.js", "js/form.utils.js", "js/svg-loader.js"
+    ],
+    "store": [
+      "js/app.js", "js/page-loader.js", "js/simplebar.min.js", "js/liquidify.js", "js/xm_plugins.min.js", "js/tiny-slider.min.js", "js/global.hexagons.js", "js/global.tooltips.js", "js/header.js", "js/sidebar.js", "js/content.js", "js/form.utils.js", "js/svg-loader.js"
+    ]
+  }
 }

@@ -1,6 +1,7 @@
 from applets import app
 from flask import request, render_template, redirect, url_for, flash
 interface = app.config['INTERFACE']
+stores = app.config['STOREDB']
 
 
 # # HOME PAGE
@@ -17,4 +18,28 @@ interface = app.config['INTERFACE']
 def marketplace():
     # Python functions
     return render_template('marketplace.html',
-                           interface=interface)
+                           interface=interface,
+                           title="Marketplace")
+
+
+# Profile
+@app.route('/profile/<name>', methods=['GET'])
+def profile(name):
+    # Python functions
+    return render_template('profile.html',
+                           interface=interface,
+                           title="Profile")
+
+
+# Store
+@app.route('/store/<name>', methods=['GET'])
+def store(name):
+    # Python functions
+    if name in stores:
+        return render_template('store.html',
+                               interface=interface,
+                               store=stores[name],
+                               title="Store")
+    else:
+        # TODO redirect to 404 page
+        return redirect(url_for('marketplace'))
