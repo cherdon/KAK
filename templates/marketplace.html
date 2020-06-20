@@ -141,7 +141,6 @@
         <!-- PRODUCT PREVIEW IMAGE -->
         <a href="marketplace-product.html">
           <figure class="product-preview-image liquid">
-            <!--<img src="{{ url_for('static', filename='img/marketplace/items/pineapple-tarts.jpg') }}" alt="item-01">-->
             <img src="{{ url_for('static', filename=item['images'][0]) }}" alt="item-01">
           </figure>
         </a>
@@ -162,7 +161,7 @@
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">{{ item['short_description'] }}</p>
+          <p class="product-preview-text">{{ item['caption'] }}</p>
           <!-- /PRODUCT PREVIEW TEXT -->
         </div>
         <!-- /PRODUCT PREVIEW INFO -->

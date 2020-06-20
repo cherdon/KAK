@@ -1,17 +1,15 @@
 {
   "items": [
     {
-      "id": 4,
+      "id": 1,
       "shop_name": "The Donnut Shop",
       "title": "Pink Frosted Donut",
-      "short_description": "Homer Simpson's classic favourite",
+      "caption": "Homer Simpson's classic favourite",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Pink Frosted Donut"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Homer Simpson's classic favourite"}
       ],
       "price": [{
           "size": "One size",
@@ -19,26 +17,22 @@
       }],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/pink-frosted-donut.jpg",
-        "img/marketplace/items/pineapple-tarts.jpg"
+        "img/marketplace/items/pink-frosted-donut.jpg"
       ],
       "details": [
-        {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+        {"Shelf life": "Best consumed within 3 days"}
       ]
     },
     {
-      "id": 5,
+      "id": 2,
       "shop_name": "The Donnut Shop",
       "title": "Cinnamon Donut",
-      "short_description": "Light and fluffy donuts with a touch of sweet cinnamon sugar",
+      "caption": "Light and fluffy donuts with a touch of sweet cinnamon sugar",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Cinnamon Donut"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Light and fluffy donuts with a touch of sweet cinnamon sugar"}
       ],
       "price": [{
           "size": "One size",
@@ -50,22 +44,19 @@
         "img/marketplace/items/pineapple-tarts.jpg"
       ],
       "details": [
-        {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+        {"Shelf life": "Best consumed within 3 days"}
       ]
     },
     {
-      "id": 6,
+      "id": 3,
       "shop_name": "The Donnut Shop",
       "title": "Tiramisu Donut",
-      "short_description": "Modern twist on the Italian classic",
-            "description": [
+      "caption": "Modern twist on the Italian classic",
+      "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Tiramisu Donut"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Modern twist on the Italian classic"}
       ],
       "price": [{
           "size": "One size",
@@ -77,22 +68,19 @@
         "img/marketplace/items/pineapple-tarts.jpg"
       ],
       "details": [
-        {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+        {"Shelf life": "Best consumed within 3 days"}
       ]
     },
     {
-      "id": 7,
+      "id": 4,
       "shop_name": "Sweet and Sassy",
       "title": "Valentine's Surprise",
-      "short_description": "A sweet surprise for your special someone",
+      "caption": "A sweet surprise for your special someone",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Valentine's Surprise"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "A sweet surprise for your special someone"}
       ],
       "price": [
         {
@@ -115,17 +103,15 @@
       ]
     },
     {
-      "id": 8,
+      "id": 5,
       "shop_name": "Sweet and Sassy",
       "title": "The Unicorn",
-      "short_description": "Cute unicorn cake that anyone can enjoy",
+      "caption": "Cute unicorn cake that anyone can enjoy",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "The Unicorn"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Cute unicorn cake that anyone can enjoy"}
       ],
       "price": [
         {
@@ -140,25 +126,23 @@
       "category": "Baked goods",
       "images": [
         "img/marketplace/items/the-unicorn.jpg",
-        "img/marketplace/items/pineapple-tarts.jpg"
+        "img/marketplace/items/the-unicorn2.jpg"
       ],
       "details": [
         {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+         "Validity": "Consume in 5 days"}
       ]
     },
     {
-      "id": 9,
+      "id": 6,
       "shop_name": "Sweet and Sassy",
       "title": "Poached Pear Cake",
-      "short_description": "Best-selling original pear flavoured cake created by our talented bakers",
+      "caption": "Best-selling original pear flavoured cake created by our talented bakers",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Poached Pear Cake"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Best-selling original pear flavoured cake created by our talented bakers"}
       ],
       "price": [
         {
@@ -172,25 +156,24 @@
       ],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/poached-pear-cake.jpg"
+        "img/marketplace/items/poached-pear-cake.jpg",
+        "img/marketplace/items/poached-pear-cake2.jpg"
       ],
       "details": [
         {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+         "Validity": "Consume in 5 days"}
       ]
     },
     {
-      "id": 10,
+      "id": 7,
       "shop_name": "Sweet and Sassy",
       "title": "Caramel Latte Cake",
-      "short_description": "Back by popular demand, our Fathers' Day special is now a permanent menu item",
+      "caption": "Back by popular demand, our Fathers' Day special is now a permanent menu item",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Caramel Latte Cake"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Back by popular demand, our Fathers' Day special is now a permanent menu item"}
       ],
       "price": [
         {
@@ -204,29 +187,28 @@
       ],
       "category": "Baked goods",
       "images": [
-        "img/marketplace/items/caramel-latte-cake.jpg"
+        "img/marketplace/items/caramel-latte-cake1.jpg",
+        "img/marketplace/items/caramel-latte-cake2.jpg"
       ],
       "details": [
         {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+         "Validity": "Consume in 5 days"}
       ]
     },
     {
-      "id": 11,
+      "id": 8,
       "shop_name": "The Long table",
       "title": "Codfish out of Water",
-      "short_description": "Pan-seared cod fillets with a side of cauliflower puree",
+      "caption": "Pan-seared cod fillets with a side of cauliflower puree",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Codfish out of Water"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Pan-seared cod fillets with a side of cauliflower puree"}
       ],
       "price": [
         {
-          "size": "One size",
+          "size": "Ala carte",
           "val": "18.90"
         }
       ],
@@ -235,26 +217,23 @@
         "img/marketplace/items/codfish.jpg"
       ],
       "details": [
-        {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+        {"N/A": ""}
       ]
     },
     {
-      "id": 12,
+      "id": 9,
       "shop_name": "The Long table",
       "title": "Hungarian Pork",
-      "short_description": "Honey Hungarian pork garnished with rocket over a bed of rock salt",
+      "caption": "Honey Hungarian pork garnished with rocket over a bed of rock salt",
       "description": [
         {"type": "title",
-         "value": "This is the title attracting factor"},
+         "value": "Hungarian Pork"},
         {"type": "text",
-         "value": "This product will be great hehe"},
-        {"type": "text",
-         "value": "This product will be great hehe"}
+         "value": "Honey Hungarian pork garnished with rocket over a bed of rock salt"}
       ],
       "price": [
         {
-          "size": "One size",
+          "size": "Ala carte",
           "val": "24.90"
         }
       ],
@@ -263,10 +242,153 @@
         "img/marketplace/items/hungarian-pork.jpg"
       ],
       "details": [
-        {"Allergens": "May contain nuts",
-         "Validity": "Consume in 10 days"}
+        {"N/A": ""}
+      ]
+    },
+    {
+      "id": 10,
+      "shop_name": "The Long table",
+      "title": "Pine Nut Pasta",
+      "caption": "Pine nut pasta stirred with fresh feta cheese",
+      "description": [
+        {"type": "title",
+         "value": "Pine Nut Pasta"},
+        {"type": "text",
+         "value": "Pine nut pasta stirred with fresh feta cheese"}
+      ],
+      "price": [
+        {
+          "size": "Ala carte",
+          "val": "12.90"
+        }
+      ],
+      "category": "Cooked food",
+      "images": [
+        "img/marketplace/items/pinenutpasta.jpg"
+      ],
+      "details": [
+        {"Allergens": "Contains cheese"}
+      ]
+    },
+    {
+      "id": 11,
+      "shop_name": "Jumkey",
+      "title": "Custom Earrings",
+      "caption": "Aana Silver Plated Floral Design Hanging Pink And Green Color Enamel Painted Silver Beads Dangler Earring",
+      "description": [
+        {"type": "title",
+         "value": "Custom Earrings"},
+        {"type": "text",
+         "value": "Aana Silver Plated Floral Design Hanging Pink And Green Color Enamel Painted Silver Beads Dangler Earring"},
+        {"type": "text",
+         "value": "This earring from Aana western jewellery collection will add a fashionable twist. This earring can be worn with any casual or formal dress. This earring can be teamed with slim jeans and a formal top for a chic work ensemble."}
+      ],
+      "price": [
+        {
+          "size": "One size",
+          "val": "25.00"
+        }
+      ],
+      "category": "Accessory",
+      "images": [
+        "img/marketplace/items/jumkey1.jpg"
+      ],
+      "details": [
+        {"N/A": ""}
+      ]
+    },
+    {
+      "id": 12,
+      "shop_name": "Jumkey",
+      "title": "Custom Earrings",
+      "caption": "Avismaya Gold Plated Multicolor Moon Stone Dangler Earring",
+      "description": [
+        {"type": "title",
+         "value": "Custom Earrings"},
+        {"type": "text",
+         "value": "Avismaya Gold Plated Multicolor Moon Stone Dangler Earring"},
+        {"type": "text",
+         "value": "We provide a vast variety of contemporary designs with many Natural Druzy stones .This designer contemporary designs make you feel like a princess wearing natural stoned jewellery. Match it with all of your designer wears and flaunt your style."}
+      ],
+      "price": [
+        {
+          "size": "One size",
+          "val": "35.00"
+        }
+      ],
+      "category": "Accessory",
+      "images": [
+        "img/marketplace/items/jumkey2.jpg"
+      ],
+      "details": [
+        {"N/A": ""}
+      ]
+    },
+    {
+      "id": 13,
+      "shop_name": "Jumkey",
+      "title": "Custom Earrings",
+      "caption": "Gold Plated Pink Color Straight Vine Beaded Tassel Design Dangler Earrings By Cippele",
+      "description": [
+        {"type": "title",
+         "value": "Custom Earrings"},
+        {"type": "text",
+         "value": "Gold Plated Pink Color Straight Vine Beaded Tassel Design Dangler Earrings By Cippele"},
+        {"type": "text",
+         "value": "Get the look that makes people turn around and appreciate your charm. Put on this beautiful earring that brings out the best of your beauty and charm. Starting off with a classy faux pearl on the earlobe and drooling down are multi layered vines of beads making the earring extremely unique, yet making the presence felt with its grace, class and amazing design!"}
+      ],
+      "price": [
+        {
+          "size": "One size",
+          "val": "20.00"
+        }
+      ],
+      "category": "Accessory",
+      "images": [
+        "img/marketplace/items/jumkey3.jpg"
+      ],
+      "details": [
+        {"Colour": "Pink",
+        "Material": "Beads"}
+      ]
+    },
+    {
+      "id": 14,
+      "shop_name": "Dust and pearls",
+      "title": "Fabric Face Mask",
+      "caption": "Hand sewn face masks made at home!",
+      "description": [
+        {"type": "title",
+         "value": "Fabric Face Mask"},
+        {"type": "text",
+         "value": "Hand sewn face masks made at home!"},
+        {"type": "text",
+         "value": "2 layer fabric face covering."},
+        {"type": "text",
+         "value": "We recommend you to wash the mask after each use."},
+        {"type": "text",
+         "value": "DISCLAIMER: these are not medical grade masks, intended for short daily use. Please wash & disinfect before first use."},
+        {"type": "text",
+         "value": "Please note returns are not accepted on this item for hygiene and health reasons."}
+      ],
+      "price": [
+        {
+          "size": "White Floral",
+          "val": "5.00"
+        },        {
+          "size": "Pink Floral",
+          "val": "5.00"
+        }
+      ],
+      "category": "Accessory",
+      "images": [
+        "img/marketplace/items/mask1.jpg",
+        "img/marketplace/items/mask2.jpg",
+        "img/marketplace/items/mask3.jpg"
+      ],
+      "details": [
+        {"N/A": ""}
       ]
     }
-
   ]
 }
