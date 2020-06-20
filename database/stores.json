@@ -6,7 +6,7 @@
     "items": 5,
     "followers": 102,
     "reviews": 10,
-    "image": "img/store/01.png",
+    "images": "img/store/01.png",
     "avatar": "img/avatar/01.jpg"},
   "2":
     {"id": 2,
@@ -15,7 +15,7 @@
     "items": 4,
     "followers": 276,
     "reviews": 11,
-    "image": "img/store/02.png",
+    "images": "img/store/02.png",
     "avatar": "img/avatar/03.jpg"},
   "3":
     {"id": 3,
@@ -24,7 +24,7 @@
     "items": 8,
     "followers": 169,
     "reviews": 5,
-    "image": "img/store/03.jpg",
+    "images": "img/store/03.jpg",
     "avatar": "img/avatar/02.jpg"},
   "4":
     {"id": 4,
@@ -33,7 +33,7 @@
     "items": 6,
     "followers": 77,
     "reviews": 3,
-    "image": "img/store/04.png",
+    "images": "img/store/04.png",
     "avatar": "img/avatar/04.jpg"},
   "5":
     {"id": 5,
@@ -42,6 +42,6 @@
     "items": 3,
     "followers": 363,
     "reviews": 4,
-    "image": "img/store/05.jpg",
+    "images": "img/store/05.jpg",
     "avatar": "img/avatar/03.jpg"}
 }

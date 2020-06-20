@@ -30,11 +30,11 @@
       <!-- SECTION HEADER INFO -->
       <div class="section-header-info">
         <!-- SECTION PRETITLE -->
-        <p class="section-pretitle">Category</p>
+        <p class="section-pretitle">{{ item['category'] }}</p>
         <!-- /SECTION PRETITLE -->
   
         <!-- SECTION TITLE -->
-        <h2 class="section-title">Item Name</h2>
+        <h2 class="section-title">{{ item['title'] }}</h2>
         <!-- /SECTION TITLE -->
       </div>
       <!-- /SECTION HEADER INFO -->
@@ -46,11 +46,11 @@
         <!-- /SECTION HEADER SUBSECTION -->
 
         <!-- SECTION HEADER SUBSECTION -->
-        <a class="section-header-subsection" href="marketplace-category.html">Category</a>
+        <a class="section-header-subsection" href="marketplace-category.html">{{ item['category'] }}</a>
         <!-- /SECTION HEADER SUBSECTION -->
   
         <!-- SECTION HEADER SUBSECTION -->
-        <p class="section-header-subsection">Item Name</p>
+        <p class="section-header-subsection">{{ item['title'] }}</p>
         <!-- /SECTION HEADER SUBSECTION -->
       </div>
       <!-- /SECTION HEADER ACTIONS -->
@@ -67,7 +67,7 @@
           <div id="product-box-slider-items" class="slider-panel-slides">
             <!-- SLIDER PANEL SLIDE -->
 
-            {% for image in images %}
+            {% for image in item['images'] %}
               <div class="slider-panel-slide">
                 <figure class="slider-panel-slide-image liquid">
                   <img src="{{ url_for('static', filename=image) }}" alt="item-image">
@@ -113,7 +113,7 @@
             <div id="product-box-slider-roster" class="roster-pictures">
               <!-- ROSTER PICTURE -->
 
-              {% for image in images %}
+              {% for image in item['images'] %}
               <div class="roster-picture">
                 <!-- ROSTER PICTURE IMAGE -->
                 <figure class="roster-picture-image liquid">
@@ -169,7 +169,7 @@
               <!-- TAB BOX ITEM CONTENT -->
               <div class="tab-box-item-content">
 
-                {% for desc in description %}
+                {% for desc in item["description"] %}
                   {% if desc['type'] == 'title' %}
                     <p class="tab-box-item-title">{{ desc['value'] }}</p>
                   {% elif desc['type'] == 'text' %}
@@ -1759,7 +1759,7 @@
           <!-- SIDEBAR BOX ITEMS -->
           <div class="sidebar-box-items">
             <!-- PRICE TITLE -->
-            <p class="price-title big"><span class="currency">$</span> 26.00</p>
+            <p class="price-title big"><span class="currency">$</span>{{ item['price'][0]['val'] }}</p>
             <!-- /PRICE TITLE -->
 
             <!-- FORM -->
@@ -1788,29 +1788,29 @@
               </div>
               <!-- /CHECKBOX WRAP -->
 
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="radio" id="license-extended" name="license_type" value="license-extended">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label class="accordion-trigger-linked" for="license-extended">Large</label>
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="radio" id="license-extended" name="license_type" value="license-extended">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label class="accordion-trigger-linked" for="license-extended">Large</label>-->
 
-                <!-- CHECKBOX INFO -->
-                <div class="checkbox-info accordion-content-linked">
-                  <!-- CHECKBOX INFO TEXT -->
-                  <p class="checkbox-info-text">Dimensions of the cookies/box<a href="#">View Details</a></p>
-                  <!-- /CHECKBOX INFO TEXT -->
-                </div>
-                <!-- /CHECKBOX INFO -->
-              </div>
-              <!-- /CHECKBOX WRAP -->
+                <!--&lt;!&ndash; CHECKBOX INFO &ndash;&gt;-->
+                <!--<div class="checkbox-info accordion-content-linked">-->
+                  <!--&lt;!&ndash; CHECKBOX INFO TEXT &ndash;&gt;-->
+                  <!--<p class="checkbox-info-text">Dimensions of the cookies/box<a href="#">View Details</a></p>-->
+                  <!--&lt;!&ndash; /CHECKBOX INFO TEXT &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX INFO &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
             </form>
             <!-- /FORM -->
 

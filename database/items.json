@@ -1,72 +1,87 @@
 {
   "items": [
     {
-      "id": 1,
-      "title": "Pineapple Tarts",
-      "description": "Delicious bite sized tarts topped with pineapple jam",
-      "price": [
-        {
-          "size": "One size",
-          "val": "14.00"
-        }
-      ],
-      "category": "Pastries",
-      "image": "img/marketplace/items/pineapple-tarts.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Custom Cake",
-      "description": "Baked to order cakes, perfect for any party or celebration",
-      "price": [
-        {
-          "size": "Small",
-          "val": "67.00"
-        }
-      ],
-      "category": "Baked goods",
-      "image": "img/marketplace/items/custom-cake.jpg"
-    },
-    {
       "id": 4,
       "shop_name": "The Donnut Shop",
       "title": "Pink Frosted Donut",
-      "description": "Homer Simpson's classic favourite",
+      "short_description": "Homer Simpson's classic favourite",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [{
           "size": "One size",
           "val": "2.00"
       }],
       "category": "Baked goods",
-      "image": "img/marketplace/items/pink-frosted-donut.jpg"
+      "images": [
+        "img/marketplace/items/pink-frosted-donut.jpg",
+        "img/marketplace/items/pineapple-tarts.jpg"
+      ]
     },
     {
       "id": 5,
       "shop_name": "The Donnut Shop",
       "title": "Cinnamon Donut",
-      "description": "Light and fluffy donuts with a touch of sweet cinnamon sugar",
+      "short_description": "Light and fluffy donuts with a touch of sweet cinnamon sugar",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [{
           "size": "One size",
           "val": "2.00"
       }],
       "category": "Baked goods",
-      "image": "img/marketplace/items/cinnamon-donut.jpg"
+      "images": [
+        "img/marketplace/items/cinnamon-donut.jpg",
+        "img/marketplace/items/pineapple-tarts.jpg"
+      ]
     },
     {
       "id": 6,
       "shop_name": "The Donnut Shop",
       "title": "Tiramisu Donut",
-      "description": "Modern twist on the Italian classic",
+      "short_description": "Modern twist on the Italian classic",
+            "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [{
           "size": "One size",
           "val": "2.00"
       }],
       "category": "Baked goods",
-      "image": "img/marketplace/items/tiramisu-donut.jpg"
+      "images": [
+        "img/marketplace/items/tiramisu-donut.jpg",
+        "img/marketplace/items/pineapple-tarts.jpg"
+      ]
     },
     {
       "id": 7,
       "shop_name": "Sweet and Sassy",
       "title": "Valentine's Surprise",
-      "description": "A sweet surprise for your special someone",
+      "short_description": "A sweet surprise for your special someone",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [
         {
           "size": "6 inches",
@@ -78,13 +93,24 @@
         }
       ],
       "category": "Baked goods",
-      "image": "img/marketplace/items/valentines-surprise.jpg"
+      "images": [
+        "img/marketplace/items/valentines-surprise1.jpg",
+        "img/marketplace/items/valentines-surprise2.jpg"
+      ]
     },
     {
       "id": 8,
       "shop_name": "Sweet and Sassy",
       "title": "The Unicorn",
-      "description": "Cute unicorn cake that anyone can enjoy",
+      "short_description": "Cute unicorn cake that anyone can enjoy",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [
         {
           "size": "6 inches",
@@ -96,13 +122,24 @@
         }
       ],
       "category": "Baked goods",
-      "image": "img/marketplace/items/the-unicorn.jpg"
+      "images": [
+        "img/marketplace/items/the-unicorn.jpg",
+        "img/marketplace/items/pineapple-tarts.jpg"
+      ]
     },
     {
       "id": 9,
       "shop_name": "Sweet and Sassy",
       "title": "Poached Pear Cake",
-      "description": "Best-selling original pear flavoured cake created by our talented bakers",
+      "short_description": "Best-selling original pear flavoured cake created by our talented bakers",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [
         {
           "size": "6 inches",
@@ -114,13 +151,23 @@
         }
       ],
       "category": "Baked goods",
-      "image": "img/marketplace/items/poached-pear-cake.jpg"
+      "images": [
+        "img/marketplace/items/poached-pear-cake.jpg"
+      ]
     },
     {
       "id": 10,
       "shop_name": "Sweet and Sassy",
       "title": "Caramel Latte Cake",
-      "description": "Back by popular demand, our Fathers' Day special is now a permanent menu item",
+      "short_description": "Back by popular demand, our Fathers' Day special is now a permanent menu item",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
       "price": [
         {
           "size": "6 inches",
@@ -132,7 +179,57 @@
         }
       ],
       "category": "Baked goods",
-      "image": "img/marketplace/items/caramel-latte-cake.jpg"
+      "images": [
+        "img/marketplace/items/caramel-latte-cake.jpg"
+      ]
+    },
+    {
+      "id": 11,
+      "shop_name": "The Long table",
+      "title": "Codfish out of Water",
+      "short_description": "Pan-seared cod fillets with a side of cauliflower puree",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
+      "price": [
+        {
+          "size": "One size",
+          "val": "18.90"
+        }
+      ],
+      "category": "Cooked food",
+      "images": [
+        "img/marketplace/items/codfish.jpg"
+      ]
+    },
+    {
+      "id": 12,
+      "shop_name": "The Long table",
+      "title": "Hungarian Pork",
+      "short_description": "Honey Hungarian pork garnished with rocket over a bed of rock salt",
+      "description": [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+      ],
+      "price": [
+        {
+          "size": "One size",
+          "val": "24.90"
+        }
+      ],
+      "category": "Cooked food",
+      "images": [
+        "img/marketplace/items/hungarian-pork.jpg"
+      ]
     }
 
   ]
