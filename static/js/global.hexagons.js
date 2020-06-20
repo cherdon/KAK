@@ -62,7 +62,7 @@ app.plugins.createHexagon({
   scale: {
     start: 0,
     end: 1,
-    stop: .8
+    stop: 1
   }
 });
 

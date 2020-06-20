@@ -39,6 +39,7 @@ def marketplace():
     return render_template('marketplace.html',
                            interface=interface,
                            items=items['items'],
+                           store=stores,
                            title="Marketplace")
 
 
@@ -65,9 +66,11 @@ def about():
 def store(name):
     # Python functions
     if name in stores:
+        filtered = list(filter(lambda item: str(item['shop_id']) == name, items['items']))
         return render_template('store.html',
                                interface=interface,
                                store=stores[name],
+                               items=filtered,
                                title="Store")
     else:
         return redirect(url_for('error'))
