@@ -49,6 +49,15 @@ def profile(name):
                            title="Profile")
 
 
+# About
+@app.route('/about', methods=['GET'])
+def about():
+    # Python functions
+    return render_template('about.html',
+                           interface=interface,
+                           title="About")
+
+
 # Store
 @app.route('/store/<name>', methods=['GET'])
 def store(name):
@@ -59,5 +68,44 @@ def store(name):
                                store=stores[name],
                                title="Store")
     else:
-        # TODO redirect to 404 page
         return redirect(url_for('error'))
+
+
+# Product
+@app.route('/product/<name>', methods=['GET'])
+def product(name):
+    # Python functions
+    images = ["img/marketplace/items/10.jpg", "img/marketplace/items/15.jpg", "img/marketplace/items/16.jpg", "img/marketplace/items/17.jpg", "img/marketplace/items/18.jpg", "img/marketplace/items/19.jpg"]
+    details = [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
+    ]
+    description = [
+        {"type": "title",
+         "value": "This is the title attracting factor"},
+        {"type": "text",
+         "value": "This product will be great hehe"},
+        {"type": "text",
+         "value": "This product will be great hehe"}
+    ]
+    inclusive = [
+        "Taadaa",
+        "Feature 2",
+        "Feature 10"
+    ]
+    return render_template('product.html',
+                           interface=interface,
+                           images=images,
+                           details=details,
+                           description=description,
+                           inclusive=inclusive,
+                           title="Product")
+
+
+# About
+@app.route('/forum', methods=['GET'])
+def forum():
+    # Python functions
+    return render_template('forum.html',
+                           interface=interface,
+                           title="Forum")
