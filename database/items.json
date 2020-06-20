@@ -21,6 +21,10 @@
       "images": [
         "img/marketplace/items/pink-frosted-donut.jpg",
         "img/marketplace/items/pineapple-tarts.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -44,6 +48,10 @@
       "images": [
         "img/marketplace/items/cinnamon-donut.jpg",
         "img/marketplace/items/pineapple-tarts.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -67,6 +75,10 @@
       "images": [
         "img/marketplace/items/tiramisu-donut.jpg",
         "img/marketplace/items/pineapple-tarts.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -96,6 +108,10 @@
       "images": [
         "img/marketplace/items/valentines-surprise1.jpg",
         "img/marketplace/items/valentines-surprise2.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Lifespan": "Consume in 5 days"}
       ]
     },
     {
@@ -125,6 +141,10 @@
       "images": [
         "img/marketplace/items/the-unicorn.jpg",
         "img/marketplace/items/pineapple-tarts.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -153,6 +173,10 @@
       "category": "Baked goods",
       "images": [
         "img/marketplace/items/poached-pear-cake.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -181,6 +205,10 @@
       "category": "Baked goods",
       "images": [
         "img/marketplace/items/caramel-latte-cake.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -205,6 +233,10 @@
       "category": "Cooked food",
       "images": [
         "img/marketplace/items/codfish.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     },
     {
@@ -229,6 +261,10 @@
       "category": "Cooked food",
       "images": [
         "img/marketplace/items/hungarian-pork.jpg"
+      ],
+      "details": [
+        {"Allergens": "May contain nuts",
+         "Validity": "Consume in 10 days"}
       ]
     }
 
