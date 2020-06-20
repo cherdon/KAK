@@ -136,10 +136,20 @@ def product(name):
         return redirect(url_for('error'))
 
 
-# About
+# Forum
 @app.route('/forum', methods=['GET'])
 def forum():
     # Python functions
     return render_template('forum.html',
                            interface=interface,
                            title="Forum")
+
+
+# Category
+@app.route('/category/<name>', methods=['GET'])
+def category(name):
+    # Python functions
+    return render_template('category.html',
+                           interface=interface,
+                           category_name=name,
+                           title="Category")
