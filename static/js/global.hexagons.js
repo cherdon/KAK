@@ -21,7 +21,7 @@ app.plugins.createHexagon({
   scale: {
     start: 0,
     end: 1,
-    stop: .74
+    stop: 1
   }
 });
 
@@ -62,7 +62,7 @@ app.plugins.createHexagon({
   scale: {
     start: 0,
     end: 1,
-    stop: .8
+    stop: 1
   }
 });
 
@@ -105,7 +105,7 @@ app.plugins.createHexagon({
   scale: {
     start: 0,
     end: 1,
-    stop: .8
+    stop: 1
   }
 });
 
@@ -150,7 +150,7 @@ app.plugins.createHexagon({
   scale: {
     start: 0,
     end: 1,
-    stop: .8
+    stop: 1
   }
 });
 

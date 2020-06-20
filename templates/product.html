@@ -30,11 +30,11 @@
       <!-- SECTION HEADER INFO -->
       <div class="section-header-info">
         <!-- SECTION PRETITLE -->
-        <p class="section-pretitle">Category</p>
+        <p class="section-pretitle">{{ category['name'] }}</p>
         <!-- /SECTION PRETITLE -->
   
         <!-- SECTION TITLE -->
-        <h2 class="section-title">Item Name</h2>
+        <h2 class="section-title">{{ product['name'] }}</h2>
         <!-- /SECTION TITLE -->
       </div>
       <!-- /SECTION HEADER INFO -->
@@ -46,11 +46,11 @@
         <!-- /SECTION HEADER SUBSECTION -->
 
         <!-- SECTION HEADER SUBSECTION -->
-        <a class="section-header-subsection" href="marketplace-category.html">Category</a>
+        <a class="section-header-subsection" href="marketplace-category.html">{{ category['name'] }}</a>
         <!-- /SECTION HEADER SUBSECTION -->
   
         <!-- SECTION HEADER SUBSECTION -->
-        <p class="section-header-subsection">Item Name</p>
+        <p class="section-header-subsection">{{ product['name'] }}</p>
         <!-- /SECTION HEADER SUBSECTION -->
       </div>
       <!-- /SECTION HEADER ACTIONS -->
@@ -169,37 +169,8 @@
               <!-- TAB BOX ITEM CONTENT -->
               <div class="tab-box-item-content">
 
-                {% for desc in description %}
-                  {% if desc['type'] == 'title' %}
-                    <p class="tab-box-item-title">{{ desc['value'] }}</p>
-                  {% elif desc['type'] == 'text' %}
-                    <p class="tab-box-item-paragraph">{{ desc['value'] }}</p>
-                  {% endif %}
-                {% endfor %}
-      
-                <!-- TAB BOX ITEM TITLE -->
-                <p class="tab-box-item-title">Included in the Product:</p>
-                <!-- /TAB BOX ITEM TITLE -->
-      
-                <!-- BULLET ITEM LIST -->
-                <ul class="bullet-item-list">
-                  <!-- BULLET ITEM -->
-                  {% for inclu in inclusive %}
-                    <li class="bullet-item">
-                      <!-- BULLET ITEM ICON -->
-                      <svg class="bullet-item-icon icon-check">
-                        <use xlink:href="#svg-check"></use>
-                      </svg>
-                      <!-- /BULLET ITEM ICON -->
-
-                      <!-- BULLET ITEM TEXT -->
-                      <p class="bullet-item-text">{{ inclu }}</p>
-                      <!-- /BULLET ITEM TEXT -->
-                    </li>
-                  {% endfor %}
-
-                  <!-- /BULLET ITEM -->
-                </ul>
+                <p class="tab-box-item-title">{{ product['name'] }}</p>
+                <p class="tab-box-item-paragraph">{{ product['description'] }}</p>
                 <!-- /BULLET ITEM LIST -->
               </div>
               <!-- /TAB BOX ITEM CONTENT -->
@@ -1754,17 +1725,19 @@
 
       <!-- MARKETPLACE SIDEBAR -->
       <div class="marketplace-sidebar">
+
         <!-- SIDEBAR BOX -->
         <div class="sidebar-box">
           <!-- SIDEBAR BOX ITEMS -->
           <div class="sidebar-box-items">
             <!-- PRICE TITLE -->
-            <p class="price-title big"><span class="currency">$</span> 26.00</p>
+            <p class="price-title big"><span class="currency">$</span>{{ product['price'] }}</p>
             <!-- /PRICE TITLE -->
 
             <!-- FORM -->
             <form class="form">
               <!-- CHECKBOX WRAP -->
+
               <div class="checkbox-wrap">
                 <input type="radio" id="license-regular" name="license_type" value="license-regular" checked>
                 <!-- CHECKBOX BOX -->
@@ -1776,7 +1749,7 @@
                   <!-- /ICON CROSS -->
                 </div>
                 <!-- /CHECKBOX BOX -->
-                <label class="accordion-trigger-linked" for="license-regular">Regular</label>
+                <label class="accordion-trigger-linked" for="license-regular">{{ product['size'] }}</label>
 
                 <!-- CHECKBOX INFO -->
                 <div class="checkbox-info accordion-content-linked accordion-open">
@@ -1786,115 +1759,40 @@
                 </div>
                 <!-- /CHECKBOX INFO -->
               </div>
+
               <!-- /CHECKBOX WRAP -->
 
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="radio" id="license-extended" name="license_type" value="license-extended">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label class="accordion-trigger-linked" for="license-extended">Large</label>
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="radio" id="license-extended" name="license_type" value="license-extended">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label class="accordion-trigger-linked" for="license-extended">Large</label>-->
 
-                <!-- CHECKBOX INFO -->
-                <div class="checkbox-info accordion-content-linked">
-                  <!-- CHECKBOX INFO TEXT -->
-                  <p class="checkbox-info-text">Dimensions of the cookies/box<a href="#">View Details</a></p>
-                  <!-- /CHECKBOX INFO TEXT -->
-                </div>
-                <!-- /CHECKBOX INFO -->
-              </div>
-              <!-- /CHECKBOX WRAP -->
+                <!--&lt;!&ndash; CHECKBOX INFO &ndash;&gt;-->
+                <!--<div class="checkbox-info accordion-content-linked">-->
+                  <!--&lt;!&ndash; CHECKBOX INFO TEXT &ndash;&gt;-->
+                  <!--<p class="checkbox-info-text">Dimensions of the cookies/box<a href="#">View Details</a></p>-->
+                  <!--&lt;!&ndash; /CHECKBOX INFO TEXT &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX INFO &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
             </form>
             <!-- /FORM -->
+
 
             <!-- BUTTON -->
             <p class="button primary">Add to Cart</p>
             <!-- /BUTTON -->
 
-            <!-- USER STATS -->
-            <div class="user-stats">
-              <!-- USER STAT -->
-              <div class="user-stat big">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">120</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- USER STAT TEXT -->
-                <p class="user-stat-text">sold</p>
-                <!-- /USER STAT TEXT -->
-              </div>
-              <!-- /USER STAT -->
-
-              <!-- USER STAT -->
-              <div class="user-stat big">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">4.2/5</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-              </div>
-              <!-- /USER STAT -->
-            </div>
-            <!-- /USER STATS -->
           </div>
           <!-- /SIDEBAR BOX ITEMS -->
 
@@ -1963,11 +1861,11 @@
               <!-- /USER STATUS AVATAR -->
 
               <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><a class="bold" href="profile-timeline.html">Maker Name</a></p>
+              <p class="user-status-title"><a class="bold" href="profile-timeline.html">{{ store['name'] }}</a></p>
               <!-- /USER STATUS TITLE -->
 
               <!-- USER STATUS TEXT -->
-              <p class="user-status-text small">5 products available</p>
+              <p class="user-status-text small">{{ store['item_count'] }} products available</p>
               <!-- /USER STATUS TEXT -->
             </div>
             <!-- /USER STATUS -->
@@ -2024,8 +1922,8 @@
             <!-- INFORMATION LINE LIST -->
             <div class="information-line-list">
               <!-- INFORMATION LINE -->
-              {% for detail in details %}
-                {% for key, value in detail.items() %}
+
+              {% for key, value in product['detail'].items() %}
                   <div class="information-line">
                     <!-- INFORMATION LINE TITLE -->
                     <p class="information-line-title">{{ key }}</p>
@@ -2035,7 +1933,6 @@
                     <p class="information-line-text"><span class="bold">{{ value }}</span></p>
                     <!-- /INFORMATION LINE TEXT -->
                   </div>
-                {% endfor %}
               {% endfor %}
 <!--              <div class="information-line">-->
 <!--                &lt;!&ndash; INFORMATION LINE TITLE &ndash;&gt;-->
@@ -2145,6 +2042,7 @@
           <!-- /SIDEBAR BOX ITEMS -->
         </div>
         <!-- /SIDEBAR BOX -->
+
       </div>
       <!-- /MARKETPLACE SIDEBAR -->
     </div>

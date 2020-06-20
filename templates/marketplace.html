@@ -75,36 +75,53 @@
       <!-- /PRODUCT CATEGORY BOX -->
 
       <!-- PRODUCT CATEGORY BOX -->
-      <a class="product-category-box category-digital" href="marketplace-category.html">
+      <a class="product-category-box category-digital" href="/category/cooked">
         <!-- PRODUCT CATEGORY BOX TITLE -->
-        <p class="product-category-box-title">Digital</p>
+        <p class="product-category-box-title">Food</p>
         <!-- /PRODUCT CATEGORY BOX TITLE -->
 
         <!-- PRODUCT CATEGORY BOX TEXT -->
-        <p class="product-category-box-text">Logos, banners...</p>
+        <p class="product-category-box-text">Beehoon, Fried rice...</p>
         <!-- /PRODUCT CATEGORY BOX TEXT -->
 
         <!-- PRODUCT CATEGORY BOX TAG -->
-        <p class="product-category-box-tag">1207 items</p>
+        <p class="product-category-box-tag">12 items</p>
         <!-- /PRODUCT CATEGORY BOX TAG -->
       </a>
       <!-- /PRODUCT CATEGORY BOX -->
 
       <!-- PRODUCT CATEGORY BOX -->
-      <a class="product-category-box category-physical" href="marketplace-category.html">
+      <a class="product-category-box category-physical" href="/category/baked">
         <!-- PRODUCT CATEGORY BOX TITLE -->
-        <p class="product-category-box-title">Physical</p>
+        <p class="product-category-box-title">Baked Items</p>
         <!-- /PRODUCT CATEGORY BOX TITLE -->
 
         <!-- PRODUCT CATEGORY BOX TEXT -->
-        <p class="product-category-box-text">Prints, joysticks...</p>
+        <p class="product-category-box-text">Croissant, cakes..</p>
         <!-- /PRODUCT CATEGORY BOX TEXT -->
 
         <!-- PRODUCT CATEGORY BOX TAG -->
-        <p class="product-category-box-tag">153 items</p>
+        <p class="product-category-box-tag">15 items</p>
         <!-- /PRODUCT CATEGORY BOX TAG -->
       </a>
       <!-- /PRODUCT CATEGORY BOX -->
+
+      <!-- PRODUCT CATEGORY BOX -->
+      <a class="product-category-box category-handicraft" href="/category/handicraft">
+        <!-- PRODUCT CATEGORY BOX TITLE -->
+        <p class="product-category-box-title">Handicraft</p>
+        <!-- /PRODUCT CATEGORY BOX TITLE -->
+
+        <!-- PRODUCT CATEGORY BOX TEXT -->
+        <p class="product-category-box-text">Necklaces, keychains..</p>
+        <!-- /PRODUCT CATEGORY BOX TEXT -->
+
+        <!-- PRODUCT CATEGORY BOX TAG -->
+        <p class="product-category-box-tag">10 items</p>
+        <!-- /PRODUCT CATEGORY BOX TAG -->
+      </a>
+      <!-- /PRODUCT CATEGORY BOX -->
+
     </div>
     <!-- /GRID -->
 
@@ -139,10 +156,9 @@
       <!--PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
+        <a href="/product/{{ item['id'] }}">
           <figure class="product-preview-image liquid">
-            <!--<img src="{{ url_for('static', filename='img/marketplace/items/pineapple-tarts.jpg') }}" alt="item-01">-->
-            <img src="{{ url_for('static', filename=item['image']) }}" alt="item-01">
+            <img src="{{ url_for('static', filename=item['images'][0]) }}" alt="item-01">
           </figure>
         </a>
         <!-- /PRODUCT PREVIEW IMAGE -->
@@ -150,7 +166,7 @@
         <!-- PRODUCT PREVIEW INFO -->
         <div class="product-preview-info">
           <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> {{ item['price'][0]['val'] }}</p>
+          <p class="text-sticker"><span class="highlighted">$</span>{{ item['price'][0]['val'] }}</p>
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
@@ -162,7 +178,7 @@
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">{{ item['description'] }}</p>
+          <p class="product-preview-text">{{ item['caption'] }}</p>
           <!-- /PRODUCT PREVIEW TEXT -->
         </div>
         <!-- /PRODUCT PREVIEW INFO -->
@@ -176,7 +192,7 @@
               <!-- USER AVATAR CONTENT -->
               <div class="user-avatar-content">
                 <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
+                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename= store[ item['shop_id'] | string]['avatar']) }}"></div>
                 <!-- /HEXAGON -->
               </div>
               <!-- /USER AVATAR CONTENT -->
@@ -188,7 +204,7 @@
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
+            <p class="product-preview-author-text"><a href="profile-timeline.html">{{ store[ item['shop_id'] | string]['name'] }}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->

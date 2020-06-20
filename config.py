@@ -27,3 +27,8 @@ class Config(object):
     INTERFACE = interface
     STOREDB = store_db
     ITEMSDB = items_db
+
+    DB_SERVER_NAME = "kakdb.database.windows.net"
+    DB_DATABASE_NAME = "KAK_DB"
+    DB_USERNAME = "cherdon"
+    DB_PASSWORD = "kaktus123!"
