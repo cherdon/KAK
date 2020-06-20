@@ -30,11 +30,11 @@
       <!-- SECTION HEADER INFO -->
       <div class="section-header-info">
         <!-- SECTION PRETITLE -->
-        <p class="section-pretitle">{{ item['category'] }}</p>
+        <p class="section-pretitle">{{ category['name'] }}</p>
         <!-- /SECTION PRETITLE -->
   
         <!-- SECTION TITLE -->
-        <h2 class="section-title">{{ item['title'] }}</h2>
+        <h2 class="section-title">{{ product['name'] }}</h2>
         <!-- /SECTION TITLE -->
       </div>
       <!-- /SECTION HEADER INFO -->
@@ -46,11 +46,11 @@
         <!-- /SECTION HEADER SUBSECTION -->
 
         <!-- SECTION HEADER SUBSECTION -->
-        <a class="section-header-subsection" href="marketplace-category.html">{{ item['category'] }}</a>
+        <a class="section-header-subsection" href="marketplace-category.html">{{ category['name'] }}</a>
         <!-- /SECTION HEADER SUBSECTION -->
   
         <!-- SECTION HEADER SUBSECTION -->
-        <p class="section-header-subsection">{{ item['title'] }}</p>
+        <p class="section-header-subsection">{{ product['name'] }}</p>
         <!-- /SECTION HEADER SUBSECTION -->
       </div>
       <!-- /SECTION HEADER ACTIONS -->
@@ -67,7 +67,7 @@
           <div id="product-box-slider-items" class="slider-panel-slides">
             <!-- SLIDER PANEL SLIDE -->
 
-            {% for image in item['images'] %}
+            {% for image in images %}
               <div class="slider-panel-slide">
                 <figure class="slider-panel-slide-image liquid">
                   <img src="{{ url_for('static', filename=image) }}" alt="item-image">
@@ -113,7 +113,7 @@
             <div id="product-box-slider-roster" class="roster-pictures">
               <!-- ROSTER PICTURE -->
 
-              {% for image in item['images'] %}
+              {% for image in images %}
               <div class="roster-picture">
                 <!-- ROSTER PICTURE IMAGE -->
                 <figure class="roster-picture-image liquid">
@@ -169,37 +169,8 @@
               <!-- TAB BOX ITEM CONTENT -->
               <div class="tab-box-item-content">
 
-                {% for desc in item["description"] %}
-                  {% if desc['type'] == 'title' %}
-                    <p class="tab-box-item-title">{{ desc['value'] }}</p>
-                  {% elif desc['type'] == 'text' %}
-                    <p class="tab-box-item-paragraph">{{ desc['value'] }}</p>
-                  {% endif %}
-                {% endfor %}
-      
-                <!-- TAB BOX ITEM TITLE -->
-                <p class="tab-box-item-title">Included in the Product:</p>
-                <!-- /TAB BOX ITEM TITLE -->
-      
-                <!-- BULLET ITEM LIST -->
-                <ul class="bullet-item-list">
-                  <!-- BULLET ITEM -->
-                  {% for inclu in inclusive %}
-                    <li class="bullet-item">
-                      <!-- BULLET ITEM ICON -->
-                      <svg class="bullet-item-icon icon-check">
-                        <use xlink:href="#svg-check"></use>
-                      </svg>
-                      <!-- /BULLET ITEM ICON -->
-
-                      <!-- BULLET ITEM TEXT -->
-                      <p class="bullet-item-text">{{ inclu }}</p>
-                      <!-- /BULLET ITEM TEXT -->
-                    </li>
-                  {% endfor %}
-
-                  <!-- /BULLET ITEM -->
-                </ul>
+                <p class="tab-box-item-title">{{ product['name'] }}</p>
+                <p class="tab-box-item-paragraph">{{ product['description'] }}</p>
                 <!-- /BULLET ITEM LIST -->
               </div>
               <!-- /TAB BOX ITEM CONTENT -->
@@ -1760,7 +1731,7 @@
           <!-- SIDEBAR BOX ITEMS -->
           <div class="sidebar-box-items">
             <!-- PRICE TITLE -->
-            <p class="price-title big"><span class="currency">$</span>{{ item['price'][0]['val'] }}</p>
+            <p class="price-title big"><span class="currency">$</span>{{ product['price'] }}</p>
             <!-- /PRICE TITLE -->
 
             <!-- FORM -->
@@ -1778,7 +1749,7 @@
                   <!-- /ICON CROSS -->
                 </div>
                 <!-- /CHECKBOX BOX -->
-                <label class="accordion-trigger-linked" for="license-regular">{{ item['price'][0]['size'] }}</label>
+                <label class="accordion-trigger-linked" for="license-regular">{{ product['size'] }}</label>
 
                 <!-- CHECKBOX INFO -->
                 <div class="checkbox-info accordion-content-linked accordion-open">
@@ -1890,11 +1861,11 @@
               <!-- /USER STATUS AVATAR -->
 
               <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><a class="bold" href="profile-timeline.html">Maker Name</a></p>
+              <p class="user-status-title"><a class="bold" href="profile-timeline.html">{{ store['name'] }}</a></p>
               <!-- /USER STATUS TITLE -->
 
               <!-- USER STATUS TEXT -->
-              <p class="user-status-text small">5 products available</p>
+              <p class="user-status-text small">{{ store['item_count'] }} products available</p>
               <!-- /USER STATUS TEXT -->
             </div>
             <!-- /USER STATUS -->
@@ -1951,16 +1922,8 @@
             <!-- INFORMATION LINE LIST -->
             <div class="information-line-list">
               <!-- INFORMATION LINE -->
-              <!--{% for desc in item["description"] %}-->
-                  <!--{% if desc['type'] == 'title' %}-->
-                    <!--<p class="tab-box-item-title">{{ desc['value'] }}</p>-->
-                  <!--{% elif desc['type'] == 'text' %}-->
-                    <!--<p class="tab-box-item-paragraph">{{ desc['value'] }}</p>-->
-                  <!--{% endif %}-->
-                <!--{% endfor %}-->
 
-              {% for detail in item['details'] %}
-                {% for key, value in detail.items() %}
+              {% for key, value in product['detail'].items() %}
                   <div class="information-line">
                     <!-- INFORMATION LINE TITLE -->
                     <p class="information-line-title">{{ key }}</p>
@@ -1970,7 +1933,6 @@
                     <p class="information-line-text"><span class="bold">{{ value }}</span></p>
                     <!-- /INFORMATION LINE TEXT -->
                   </div>
-                {% endfor %}
               {% endfor %}
 <!--              <div class="information-line">-->
 <!--                &lt;!&ndash; INFORMATION LINE TITLE &ndash;&gt;-->
