@@ -1754,6 +1754,7 @@
 
       <!-- MARKETPLACE SIDEBAR -->
       <div class="marketplace-sidebar">
+
         <!-- SIDEBAR BOX -->
         <div class="sidebar-box">
           <!-- SIDEBAR BOX ITEMS -->
@@ -1765,6 +1766,7 @@
             <!-- FORM -->
             <form class="form">
               <!-- CHECKBOX WRAP -->
+
               <div class="checkbox-wrap">
                 <input type="radio" id="license-regular" name="license_type" value="license-regular" checked>
                 <!-- CHECKBOX BOX -->
@@ -1776,7 +1778,7 @@
                   <!-- /ICON CROSS -->
                 </div>
                 <!-- /CHECKBOX BOX -->
-                <label class="accordion-trigger-linked" for="license-regular">Regular</label>
+                <label class="accordion-trigger-linked" for="license-regular">{{ item['price'][0]['size'] }}</label>
 
                 <!-- CHECKBOX INFO -->
                 <div class="checkbox-info accordion-content-linked accordion-open">
@@ -1786,6 +1788,7 @@
                 </div>
                 <!-- /CHECKBOX INFO -->
               </div>
+
               <!-- /CHECKBOX WRAP -->
 
               <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
@@ -1814,87 +1817,11 @@
             </form>
             <!-- /FORM -->
 
+
             <!-- BUTTON -->
             <p class="button primary">Add to Cart</p>
             <!-- /BUTTON -->
 
-            <!-- USER STATS -->
-            <div class="user-stats">
-              <!-- USER STAT -->
-              <div class="user-stat big">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">120</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- USER STAT TEXT -->
-                <p class="user-stat-text">sold</p>
-                <!-- /USER STAT TEXT -->
-              </div>
-              <!-- /USER STAT -->
-
-              <!-- USER STAT -->
-              <div class="user-stat big">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">4.2/5</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-              </div>
-              <!-- /USER STAT -->
-            </div>
-            <!-- /USER STATS -->
           </div>
           <!-- /SIDEBAR BOX ITEMS -->
 
@@ -2024,7 +1951,15 @@
             <!-- INFORMATION LINE LIST -->
             <div class="information-line-list">
               <!-- INFORMATION LINE -->
-              {% for detail in details %}
+              <!--{% for desc in item["description"] %}-->
+                  <!--{% if desc['type'] == 'title' %}-->
+                    <!--<p class="tab-box-item-title">{{ desc['value'] }}</p>-->
+                  <!--{% elif desc['type'] == 'text' %}-->
+                    <!--<p class="tab-box-item-paragraph">{{ desc['value'] }}</p>-->
+                  <!--{% endif %}-->
+                <!--{% endfor %}-->
+
+              {% for detail in item['details'] %}
                 {% for key, value in detail.items() %}
                   <div class="information-line">
                     <!-- INFORMATION LINE TITLE -->
@@ -2145,6 +2080,7 @@
           <!-- /SIDEBAR BOX ITEMS -->
         </div>
         <!-- /SIDEBAR BOX -->
+
       </div>
       <!-- /MARKETPLACE SIDEBAR -->
     </div>

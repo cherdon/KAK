@@ -68,13 +68,16 @@
               <!-- USER AVATAR BADGE CONTENT -->
               <div class="user-avatar-badge-content">
                 <!-- HEXAGON -->
-                <div class="hexagon-dark-32-34"></div>
+                <div class="hexagon-dark-32-34">
+<!--                  <img class="user-verified" src="{{ url_for('static', filename='img/avatar/verified.png') }}">-->
+                </div>
                 <!-- /HEXAGON -->
               </div>
               <!-- /USER AVATAR BADGE CONTENT -->
         
               <!-- USER AVATAR BADGE TEXT -->
-              <p class="user-avatar-badge-text">24</p>
+
+              <p class="user-avatar-badge-text">✓</p>
               <!-- /USER AVATAR BADGE TEXT -->
             </div>
             <!-- /USER AVATAR BADGE -->
@@ -134,7 +137,8 @@
               <!-- /USER AVATAR BADGE CONTENT -->
         
               <!-- USER AVATAR BADGE TEXT -->
-              <p class="user-avatar-badge-text">24</p>
+<!--              <img class="user-avatar-badge-icon" src="{{ url_for('static', filename='img/avatar/verified.png') }}" alt="flag-usa">-->
+              <p class="user-avatar-badge-text">✓</p>
               <!-- /USER AVATAR BADGE TEXT -->
             </div>
             <!-- /USER AVATAR BADGE -->
@@ -154,7 +158,8 @@
         <!-- PROFILE HEADER SOCIAL LINKS WRAP -->
         <div class="profile-header-social-links-wrap">
           <!-- PROFILE HEADER SOCIAL LINKS -->
-          <div id="profile-header-social-links-slider" class="profile-header-social-links">
+          <div id="profile-header-social-links-slider" class="profile-header-social-links" style="float: right;">
+
             <div class="profile-header-social-link">
               <!-- SOCIAL LINK -->
               <a class="social-link facebook" href="#">
@@ -167,17 +172,17 @@
               <!-- /SOCIAL LINK -->
             </div>
       
-            <div class="profile-header-social-link">
-              <!-- SOCIAL LINK -->
-              <a class="social-link twitter" href="#">
-                <!-- ICON TWITTER -->
-                <svg class="icon-twitter">
-                  <use xlink:href="#svg-twitter"></use>
-                </svg>
-                <!-- /ICON TWITTER -->
-              </a>
-              <!-- /SOCIAL LINK -->
-            </div>
+<!--            <div class="profile-header-social-link">-->
+<!--              &lt;!&ndash; SOCIAL LINK &ndash;&gt;-->
+<!--              <a class="social-link twitter" href="#">-->
+<!--                &lt;!&ndash; ICON TWITTER &ndash;&gt;-->
+<!--                <svg class="icon-twitter">-->
+<!--                  <use xlink:href="#svg-twitter"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /ICON TWITTER &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /SOCIAL LINK &ndash;&gt;-->
+<!--            </div>-->
   
             <div class="profile-header-social-link">
               <!-- SOCIAL LINK -->
@@ -191,17 +196,17 @@
               <!-- /SOCIAL LINK -->
             </div>
       
-            <div class="profile-header-social-link">
-              <!-- SOCIAL LINK -->
-              <a class="social-link twitch" href="#">
-                <!-- ICON TWITCH -->
-                <svg class="icon-twitch">
-                  <use xlink:href="#svg-twitch"></use>
-                </svg>
-                <!-- /ICON TWITCH -->
-              </a>
-              <!-- /SOCIAL LINK -->
-            </div>
+<!--            <div class="profile-header-social-link">-->
+<!--              &lt;!&ndash; SOCIAL LINK &ndash;&gt;-->
+<!--              <a class="social-link twitch" href="#">-->
+<!--                &lt;!&ndash; ICON TWITCH &ndash;&gt;-->
+<!--                <svg class="icon-twitch">-->
+<!--                  <use xlink:href="#svg-twitch"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /ICON TWITCH &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /SOCIAL LINK &ndash;&gt;-->
+<!--            </div>-->
       
             <div class="profile-header-social-link">
               <!-- SOCIAL LINK -->
@@ -214,31 +219,32 @@
               </a>
               <!-- /SOCIAL LINK -->
             </div>
-  
-            <div class="profile-header-social-link">
-              <!-- SOCIAL LINK -->
-              <a class="social-link patreon" href="#">
-                <!-- ICON PATREON -->
-                <svg class="icon-patreon">
-                  <use xlink:href="#svg-patreon"></use>
-                </svg>
-                <!-- /ICON PATREON -->
-              </a>
-              <!-- /SOCIAL LINK -->
-            </div>
-  
-            <div class="profile-header-social-link">
-              <!-- SOCIAL LINK -->
-              <a class="social-link discord" href="#">
-                <!-- ICON DISCORD -->
-                <svg class="icon-discord">
-                  <use xlink:href="#svg-discord"></use>
-                </svg>
-                <!-- /ICON DISCORD -->
-              </a>
-              <!-- /SOCIAL LINK -->
-            </div>
           </div>
+  
+<!--            <div class="profile-header-social-link">-->
+<!--              &lt;!&ndash; SOCIAL LINK &ndash;&gt;-->
+<!--              <a class="social-link patreon" href="#">-->
+<!--                &lt;!&ndash; ICON PATREON &ndash;&gt;-->
+<!--                <svg class="icon-patreon">-->
+<!--                  <use xlink:href="#svg-patreon"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /ICON PATREON &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /SOCIAL LINK &ndash;&gt;-->
+<!--            </div>-->
+  
+<!--            <div class="profile-header-social-link">-->
+<!--              &lt;!&ndash; SOCIAL LINK &ndash;&gt;-->
+<!--              <a class="social-link discord" href="#">-->
+<!--                &lt;!&ndash; ICON DISCORD &ndash;&gt;-->
+<!--                <svg class="icon-discord">-->
+<!--                  <use xlink:href="#svg-discord"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /ICON DISCORD &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /SOCIAL LINK &ndash;&gt;-->
+<!--            </div>-->
+
           <!-- /PROFILE HEADER SOCIAL LINKS -->
   
           <!-- SLIDER CONTROLS -->
@@ -308,11 +314,11 @@
           <!-- USER STAT -->
           <div class="user-stat big">
             <!-- USER STAT IMAGE -->
-            <img class="user-stat-image" src="{{ url_for('static', filename='img/flag/usa.png') }}" alt="flag-usa">
+            <img class="user-stat-image" src="{{ url_for('static', filename=store['flag']) }}" >
             <!-- /USER STAT IMAGE -->
     
             <!-- USER STAT TEXT -->
-            <p class="user-stat-text">usa</p>
+            <p class="user-stat-text">{{ store['flagname'] }}</p>
             <!-- /USER STAT TEXT -->
           </div>
           <!-- /USER STAT -->
@@ -528,11 +534,11 @@
         <!-- SECTION HEADER INFO -->
         <div class="section-header-info">
           <!-- SECTION PRETITLE -->
-          <p class="section-pretitle">Browse Marina's</p>
+          <p class="section-pretitle">Browse {{ store['name'] }}</p>
           <!-- /SECTION PRETITLE -->
   
           <!-- SECTION TITLE -->
-          <h2 class="section-title">Item Store <span class="highlighted">5</span></h2>
+          <h2 class="section-title">Item Store <span class="highlighted">{{ store['items'] }}</span></h2>
           <!-- /SECTION TITLE -->
         </div>
         <!-- /SECTION HEADER INFO -->
@@ -642,85 +648,85 @@
           <!-- /PRODUCT PREVIEW INFO -->
       
           <!-- PRODUCT PREVIEW META -->
-          <div class="product-preview-meta">
-            <!-- PRODUCT PREVIEW AUTHOR -->
-            <div class="product-preview-author">
-              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                <!-- USER AVATAR CONTENT -->
-                <div class="user-avatar-content">
-                  <!-- HEXAGON -->
-                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                  <!-- /HEXAGON -->
-                </div>
-                <!-- /USER AVATAR CONTENT -->
-              </a>
-              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-              <p class="product-preview-author-title">Posted By</p>
-              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW AUTHOR -->
-      
-            <!-- RATING LIST -->
-            <div class="rating-list">
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-            </div>
-            <!-- /RATING LIST -->
-          </div>
+<!--          <div class="product-preview-meta">-->
+<!--            &lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--            <div class="product-preview-author">-->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+<!--                &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+<!--                <div class="user-avatar-content">-->
+<!--                  &lt;!&ndash; HEXAGON &ndash;&gt;-->
+<!--                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+<!--                  &lt;!&ndash; /HEXAGON &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--              <p class="product-preview-author-title">Posted By</p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--      -->
+<!--            &lt;!&ndash; RATING LIST &ndash;&gt;-->
+<!--            <div class="rating-list">-->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /RATING LIST &ndash;&gt;-->
+<!--          </div>-->
           <!-- /PRODUCT PREVIEW META -->
         </div>
         <!-- /PRODUCT PREVIEW -->
@@ -756,85 +762,85 @@
           <!-- /PRODUCT PREVIEW INFO -->
       
           <!-- PRODUCT PREVIEW META -->
-          <div class="product-preview-meta">
-            <!-- PRODUCT PREVIEW AUTHOR -->
-            <div class="product-preview-author">
-              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                <!-- USER AVATAR CONTENT -->
-                <div class="user-avatar-content">
-                  <!-- HEXAGON -->
-                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                  <!-- /HEXAGON -->
-                </div>
-                <!-- /USER AVATAR CONTENT -->
-              </a>
-              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-              <p class="product-preview-author-title">Posted By</p>
-              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW AUTHOR -->
-      
-            <!-- RATING LIST -->
-            <div class="rating-list">
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-            </div>
-            <!-- /RATING LIST -->
-          </div>
+<!--          <div class="product-preview-meta">-->
+<!--            &lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--            <div class="product-preview-author">-->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+<!--                &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+<!--                <div class="user-avatar-content">-->
+<!--                  &lt;!&ndash; HEXAGON &ndash;&gt;-->
+<!--                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+<!--                  &lt;!&ndash; /HEXAGON &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--              <p class="product-preview-author-title">Posted By</p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--      -->
+<!--            &lt;!&ndash; RATING LIST &ndash;&gt;-->
+<!--            <div class="rating-list">-->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /RATING LIST &ndash;&gt;-->
+<!--          </div>-->
           <!-- /PRODUCT PREVIEW META -->
         </div>
         <!-- /PRODUCT PREVIEW -->
@@ -870,85 +876,85 @@
           <!-- /PRODUCT PREVIEW INFO -->
       
           <!-- PRODUCT PREVIEW META -->
-          <div class="product-preview-meta">
-            <!-- PRODUCT PREVIEW AUTHOR -->
-            <div class="product-preview-author">
-              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                <!-- USER AVATAR CONTENT -->
-                <div class="user-avatar-content">
-                  <!-- HEXAGON -->
-                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                  <!-- /HEXAGON -->
-                </div>
-                <!-- /USER AVATAR CONTENT -->
-              </a>
-              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-              <p class="product-preview-author-title">Posted By</p>
-              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW AUTHOR -->
-      
-            <!-- RATING LIST -->
-            <div class="rating-list">
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-            </div>
-            <!-- /RATING LIST -->
-          </div>
+<!--          <div class="product-preview-meta">-->
+<!--            &lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--            <div class="product-preview-author">-->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+<!--                &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+<!--                <div class="user-avatar-content">-->
+<!--                  &lt;!&ndash; HEXAGON &ndash;&gt;-->
+<!--                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+<!--                  &lt;!&ndash; /HEXAGON &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--              <p class="product-preview-author-title">Posted By</p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--      -->
+<!--            &lt;!&ndash; RATING LIST &ndash;&gt;-->
+<!--            <div class="rating-list">-->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /RATING LIST &ndash;&gt;-->
+<!--          </div>-->
           <!-- /PRODUCT PREVIEW META -->
         </div>
         <!-- /PRODUCT PREVIEW -->
@@ -984,85 +990,85 @@
           <!-- /PRODUCT PREVIEW INFO -->
       
           <!-- PRODUCT PREVIEW META -->
-          <div class="product-preview-meta">
-            <!-- PRODUCT PREVIEW AUTHOR -->
-            <div class="product-preview-author">
-              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                <!-- USER AVATAR CONTENT -->
-                <div class="user-avatar-content">
-                  <!-- HEXAGON -->
-                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                  <!-- /HEXAGON -->
-                </div>
-                <!-- /USER AVATAR CONTENT -->
-              </a>
-              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-              <p class="product-preview-author-title">Posted By</p>
-              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW AUTHOR -->
-      
-            <!-- RATING LIST -->
-            <div class="rating-list">
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-            </div>
-            <!-- /RATING LIST -->
-          </div>
+<!--          <div class="product-preview-meta">-->
+<!--            &lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--            <div class="product-preview-author">-->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+<!--                &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+<!--                <div class="user-avatar-content">-->
+<!--                  &lt;!&ndash; HEXAGON &ndash;&gt;-->
+<!--                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+<!--                  &lt;!&ndash; /HEXAGON &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--              <p class="product-preview-author-title">Posted By</p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--      -->
+<!--            &lt;!&ndash; RATING LIST &ndash;&gt;-->
+<!--            <div class="rating-list">-->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /RATING LIST &ndash;&gt;-->
+<!--          </div>-->
           <!-- /PRODUCT PREVIEW META -->
         </div>
         <!-- /PRODUCT PREVIEW -->
@@ -1098,85 +1104,85 @@
           <!-- /PRODUCT PREVIEW INFO -->
       
           <!-- PRODUCT PREVIEW META -->
-          <div class="product-preview-meta">
-            <!-- PRODUCT PREVIEW AUTHOR -->
-            <div class="product-preview-author">
-              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                <!-- USER AVATAR CONTENT -->
-                <div class="user-avatar-content">
-                  <!-- HEXAGON -->
-                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename= store['avatar']) }}"></div>
-                  <!-- /HEXAGON -->
-                </div>
-                <!-- /USER AVATAR CONTENT -->
-              </a>
-              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-<!--              <p class="product-preview-author-title">Posted By</p>-->
-              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-      
-              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-<!--              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
-              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW AUTHOR -->
-      
-            <!-- RATING LIST -->
-            <div class="rating-list">
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating filled">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-      
-              <!-- RATING -->
-              <div class="rating">
-                <!-- RATING ICON -->
-                <svg class="rating-icon icon-star">
-                  <use xlink:href="#svg-star"></use>
-                </svg>
-                <!-- /RATING ICON -->
-              </div>
-              <!-- /RATING -->
-            </div>
-            <!-- /RATING LIST -->
-          </div>
+<!--          <div class="product-preview-meta">-->
+<!--            &lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--            <div class="product-preview-author">-->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+<!--                &lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+<!--                <div class="user-avatar-content">-->
+<!--                  &lt;!&ndash; HEXAGON &ndash;&gt;-->
+<!--                  <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename= store['avatar']) }}"></div>-->
+<!--                  &lt;!&ndash; /HEXAGON &ndash;&gt;-->
+<!--                </div>-->
+<!--                &lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+<!--              </a>-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--&lt;!&ndash;              <p class="product-preview-author-title">Posted By</p>&ndash;&gt;-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--&lt;!&ndash;              <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>&ndash;&gt;-->
+<!--              &lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+<!--      -->
+<!--            &lt;!&ndash; RATING LIST &ndash;&gt;-->
+<!--            <div class="rating-list">-->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating filled">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--      -->
+<!--              &lt;!&ndash; RATING &ndash;&gt;-->
+<!--              <div class="rating">-->
+<!--                &lt;!&ndash; RATING ICON &ndash;&gt;-->
+<!--                <svg class="rating-icon icon-star">-->
+<!--                  <use xlink:href="#svg-star"></use>-->
+<!--                </svg>-->
+<!--                &lt;!&ndash; /RATING ICON &ndash;&gt;-->
+<!--              </div>-->
+<!--              &lt;!&ndash; /RATING &ndash;&gt;-->
+<!--            </div>-->
+<!--            &lt;!&ndash; /RATING LIST &ndash;&gt;-->
+<!--          </div>-->
           <!-- /PRODUCT PREVIEW META -->
         </div>
         <!-- /PRODUCT PREVIEW -->
@@ -1184,6 +1190,21 @@
       <!-- /GRID -->
     </section>
     <!-- /SECTION -->
+    <section class = "section">
+      <!-- SECTION HEADER-->
+      <div class="section-header">
+        <!-- SECTION TITLE -->
+        <h2 class=""section-title">
+        About Shop</h2>
+        <!-- /SECTION TITLE  -->
+      </div>
+      <!--/SECTION HEADER-->
+      <div class="section-filters-bar centered v3" style="height:auto;padding:20px;text-align:justify">
+        <!--SECTION BODY-->
+        <p class="filter-tab-text">{{store['about']}}</p>
+      </div>
+
+    </section>
   </div>
   <!-- /CONTENT GRID -->
 {% endblock %}
