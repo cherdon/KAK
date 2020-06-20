@@ -76,45 +76,17 @@ def store(name):
         return redirect(url_for('error'))
 
 
-# Product
-# @app.route('/product/<name>', methods=['GET'])
-# def product(name):
-#     # Python functions
-#     images = ["img/marketplace/items/10.jpg", "img/marketplace/items/15.jpg", "img/marketplace/items/16.jpg", "img/marketplace/items/17.jpg", "img/marketplace/items/18.jpg", "img/marketplace/items/19.jpg"]
-#     details = [
-#         {"Allergens": "May contain nuts",
-#          "Validity": "Consume in 10 days"}
-#     ]
-#     description = [
-#         {"type": "title",
-#          "value": "This is the title attracting factor"},
-#         {"type": "text",
-#          "value": "This product will be great hehe"},
-#         {"type": "text",
-#          "value": "This product will be great hehe"}
-#     ]
-#     inclusive = [
-#         "Taadaa",
-#         "Feature 2",
-#         "Feature 10"
-#     ]
-#     return render_template('product.html',
-#                            interface=interface,
-#                            images=images,
-#                            details=details,
-#                            description=description,
-#                            inclusive=inclusive,
-#                            title="Product")
-
 def split_detail(string):
     details = {}
     items = string.split(".")
     for item in items:
-        [key, value] = item.split(',')
-        details[key] = value
+        if len(item.split(',')) > 1:
+            [key, value] = item.split(',')
+            details[key] = value
     return details
 
 
+# Product
 @app.route('/product/<id>', methods=['GET'])
 def product(id):
     cur = sql.start_conn()
@@ -136,6 +108,7 @@ def product(id):
                                product=product,
                                category=category,
                                title="Product")
+
     else:
         return redirect(url_for('error'))
 
@@ -153,7 +126,9 @@ def forum():
 @app.route('/category/<name>', methods=['GET'])
 def category(name):
     # Python functions
-
+    filtered = list(filter(lambda item: str(item['cat']) == name, items['items']))
     return render_template('category.html',
                            interface=interface,
+                           items=filtered,
+                           store=stores,
                            title="Category")

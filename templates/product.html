@@ -1833,6 +1833,7 @@
                   <!-- /USER AVATAR PROGRESS BORDER -->
 
                   <!-- USER AVATAR BADGE -->
+                  {% if store['verification']==1 %}
                   <div class="user-avatar-badge">
                     <!-- USER AVATAR BADGE BORDER -->
                     <div class="user-avatar-badge-border">
@@ -1851,14 +1852,17 @@
                     <!-- /USER AVATAR BADGE CONTENT -->
 
                     <!-- USER AVATAR BADGE TEXT -->
-                    <p class="user-avatar-badge-text">24</p>
+                    <p class="user-avatar-badge-text">✓</p>
                     <!-- /USER AVATAR BADGE TEXT -->
                   </div>
+                    {%endif%}
                   <!-- /USER AVATAR BADGE -->
                 </div>
                 <!-- /USER AVATAR -->
               </a>
               <!-- /USER STATUS AVATAR -->
+
+
 
               <!-- USER STATUS TITLE -->
               <p class="user-status-title"><a class="bold" href="profile-timeline.html">{{ store['name'] }}</a></p>

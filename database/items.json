@@ -17,6 +17,7 @@
           "val": "2.00"
       }],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/pink-frosted-donut.jpg"
       ],
@@ -41,6 +42,7 @@
           "val": "2.00"
       }],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/cinnamon-donut.jpg"
       ],
@@ -65,6 +67,7 @@
           "val": "2.00"
       }],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/tiramisu-donut.jpg"
       ],
@@ -95,6 +98,7 @@
         }
       ],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/valentines-surprise1.jpg",
         "img/marketplace/items/valentines-surprise2.jpg"
@@ -127,6 +131,7 @@
         }
       ],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/the-unicorn1.jpg",
         "img/marketplace/items/the-unicorn2.jpg"
@@ -159,6 +164,7 @@
         }
       ],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/poached-pear-cake1.jpg",
         "img/marketplace/items/poached-pear-cake2.jpg"
@@ -191,6 +197,7 @@
         }
       ],
       "category": "Baked goods",
+      "cat": "baked",
       "images": [
         "img/marketplace/items/caramel-latte-cake1.jpg",
         "img/marketplace/items/caramel-latte-cake2.jpg"
@@ -219,6 +226,7 @@
         }
       ],
       "category": "Cooked food",
+      "cat": "cooked",
       "images": [
         "img/marketplace/items/codfish.jpg"
       ],
@@ -245,6 +253,7 @@
         }
       ],
       "category": "Cooked food",
+      "cat": "cooked",
       "images": [
         "img/marketplace/items/hungarian-pork.jpg"
       ],
@@ -271,6 +280,7 @@
         }
       ],
       "category": "Cooked food",
+      "cat": "cooked",
       "images": [
         "img/marketplace/items/pinenutpasta.jpg"
       ],
@@ -298,7 +308,8 @@
           "val": "25.00"
         }
       ],
-      "category": "Accessory",
+      "category": "Accessories",
+      "cat": "accessories",
       "images": [
         "img/marketplace/items/jumkey1.jpg"
       ],
@@ -326,7 +337,8 @@
           "val": "35.00"
         }
       ],
-      "category": "Accessory",
+      "category": "Accessories",
+      "cat": "accessories",
       "images": [
         "img/marketplace/items/jumkey2.jpg"
       ],
@@ -354,7 +366,8 @@
           "val": "20.00"
         }
       ],
-      "category": "Accessory",
+      "category": "Accessories",
+      "cat": "accessories",
       "images": [
         "img/marketplace/items/jumkey3.jpg"
       ],
@@ -392,7 +405,8 @@
           "val": "5.00"
         }
       ],
-      "category": "Accessory",
+      "category": "Accessories",
+      "cat": "accessories",
       "images": [
         "img/marketplace/items/mask1.jpg",
         "img/marketplace/items/mask2.jpg",

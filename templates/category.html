@@ -34,7 +34,7 @@
         <!-- /SECTION PRETITLE -->
   
         <!-- SECTION TITLE -->
-        <h2 class="section-title">Digital Items</h2>
+        <h2 class="section-title">{{ items[0]['category'] }}</h2>
         <!-- /SECTION TITLE -->
       </div>
       <!-- /SECTION HEADER INFO -->
@@ -42,11 +42,11 @@
       <!-- SECTION HEADER ACTIONS -->
       <div class="section-header-actions">
         <!-- SECTION HEADER SUBSECTION -->
-        <a class="section-header-subsection" href="marketplace.html">Marketplace</a>
+        <a class="section-header-subsection" href="/marketplace">Marketplace</a>
         <!-- /SECTION HEADER SUBSECTION -->
   
         <!-- SECTION HEADER SUBSECTION -->
-        <p class="section-header-subsection">Digital Items</p>
+        <p class="section-header-subsection">{{ items[0]['category'] }}</p>
         <!-- /SECTION HEADER SUBSECTION -->
       </div>
       <!-- /SECTION HEADER ACTIONS -->
@@ -133,701 +133,701 @@
     <!-- /SECTION FILTERS BAR -->
 
     <!-- GRID -->
-    <div class="grid grid-3-9 small-space">
+    <div class="grid grid-3 small-space">
       <!-- MARKETPLACE SIDEBAR -->
-      <div class="marketplace-sidebar">
-        <!-- SIDEBAR BOX -->
-        <div class="sidebar-box">
-          <!-- SIDEBAR BOX TITLE -->
-          <p class="sidebar-box-title">Categories</p>
-          <!-- /SIDEBAR BOX TITLE -->
-      
-          <!-- SIDEBAR BOX ITEMS -->
-          <div class="sidebar-box-items">
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-all" name="category_all">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-all">All Categories</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">1207</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-psd" name="category_psd">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-psd">PSD Templates</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">134</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-html" name="category_html" checked>
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-html">HTML Templates</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">566</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-wp" name="category_wp">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-wp">WP Templates</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">209</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-illustrations" name="category_illustrations">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-illustrations">Illustrations</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">80</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-logos-and-badges" name="category_logos-and-badges" checked>
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-logos-and-badges">Logos and Badges</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">21</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-stream-packs" name="category_stream-packs">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-stream-packs">Stream Packs</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">197</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-          </div>
-          <!-- /SIDEBAR BOX ITEMS -->
-      
-          <!-- SIDEBAR BOX TITLE -->
-          <p class="sidebar-box-title">Files Included</p>
-          <!-- /SIDEBAR BOX TITLE -->
-      
-          <!-- SIDEBAR BOX ITEMS -->
-          <div class="sidebar-box-items">
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-photoshop" name="category_photoshop">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-photoshop">Photoshop PSD</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">785</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-illustrator" name="category_illustrator">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-illustrator">Illustrator AI</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">398</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-sketch" name="category_sketch">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-sketch">Sketch SKETCH</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">22</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-html-css" name="category_html-css">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-html-css">HTML &amp; CSS</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">566</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="category-wordpress" name="wordpress">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
-                </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="category-wordpress">WordPress</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">209</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-          </div>
-          <!-- /SIDEBAR BOX ITEMS -->
-      
-          <!-- SIDEBAR BOX TITLE -->
-          <p class="sidebar-box-title">Price Range</p>
-          <!-- /SIDEBAR BOX TITLE -->
-      
-          <!-- SIDEBAR BOX ITEMS -->
-          <div class="sidebar-box-items small-space">
-            <!-- FORM ITEM -->
-            <div class="form-item split">
-              <!-- FORM INPUT -->
-              <div class="form-input small active always-active currency-decorated">
-                <label for="price-from">From</label>
-                <input type="text" id="price-from" name="price_from">
-              </div>
-              <!-- /FORM INPUT -->
-      
-              <!-- FORM INPUT -->
-              <div class="form-input small active always-active currency-decorated">
-                <label for="price-to">To</label>
-                <input type="text" id="price-to" name="price_to">
-              </div>
-              <!-- /FORM INPUT -->
-            </div>
-            <!-- /FORM ITEM -->
-          </div>
-          <!-- /SIDEBAR BOX ITEMS -->
-      
-          <!-- BUTTON -->
-          <p class="button small primary">Apply Price Filter!</p>
-          <!-- /BUTTON -->
-      
-          <!-- SIDEBAR BOX TITLE -->
-          <p class="sidebar-box-title">Reviews</p>
-          <!-- /SIDEBAR BOX TITLE -->
-      
-          <!-- SIDEBAR BOX ITEMS -->
-          <div class="sidebar-box-items">
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="radio" id="reviews-all" name="reviews-rating" value="reviews-all">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box round"></div>
-                <!-- /CHECKBOX BOX -->
-                <label for="reviews-all">All Reviews</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">1207</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap checkbox-rating">
-                <input type="radio" id="reviews-4-up" name="reviews-rating" value="reviews-4-up" checked>
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box round"></div>
-                <!-- /CHECKBOX BOX -->
-      
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-      
-                <label for="reviews-4-up">4 +</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">964</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap checkbox-rating">
-                <input type="radio" id="reviews-3-up" name="reviews-rating" value="reviews-3-up">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box round"></div>
-                <!-- /CHECKBOX BOX -->
-      
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-      
-                <label for="reviews-3-up">3 +</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">214</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap checkbox-rating">
-                <input type="radio" id="reviews-2-up" name="reviews-rating" value="reviews-2-up">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box round"></div>
-                <!-- /CHECKBOX BOX -->
-      
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-      
-                <label for="reviews-2-up">2 +</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">102</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-      
-            <!-- CHECKBOX LINE -->
-            <div class="checkbox-line">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap checkbox-rating">
-                <input type="radio" id="reviews-1-up" name="reviews-rating" value="reviews-1-up">
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box round"></div>
-                <!-- /CHECKBOX BOX -->
-      
-                <!-- RATING LIST -->
-                <div class="rating-list">
-                  <!-- RATING -->
-                  <div class="rating filled">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-          
-                  <!-- RATING -->
-                  <div class="rating">
-                    <!-- RATING ICON -->
-                    <svg class="rating-icon icon-star">
-                      <use xlink:href="#svg-star"></use>
-                    </svg>
-                    <!-- /RATING ICON -->
-                  </div>
-                  <!-- /RATING -->
-                </div>
-                <!-- /RATING LIST -->
-      
-                <label for="reviews-1-up">1 +</label>
-              </div>
-              <!-- /CHECKBOX WRAP -->
-      
-              <!-- CHECKBOX LINE TEXT -->
-              <p class="checkbox-line-text">76</p>
-              <!-- /CHECKBOX LINE TEXT -->
-            </div>
-            <!-- /CHECKBOX LINE -->
-          </div>
-          <!-- /SIDEBAR BOX ITEMS -->
-        </div>
-        <!-- /SIDEBAR BOX -->
-      </div>
+      <!--<div class="marketplace-sidebar">-->
+        <!--&lt;!&ndash; SIDEBAR BOX &ndash;&gt;-->
+        <!--<div class="sidebar-box">-->
+          <!--&lt;!&ndash; SIDEBAR BOX TITLE &ndash;&gt;-->
+          <!--<p class="sidebar-box-title">Categories</p>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX ITEMS &ndash;&gt;-->
+          <!--<div class="sidebar-box-items">-->
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-all" name="category_all">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-all">All Categories</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">1207</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-psd" name="category_psd">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-psd">PSD Templates</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">134</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-html" name="category_html" checked>-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-html">HTML Templates</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">566</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-wp" name="category_wp">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-wp">WP Templates</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">209</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-illustrations" name="category_illustrations">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-illustrations">Illustrations</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">80</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-logos-and-badges" name="category_logos-and-badges" checked>-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-logos-and-badges">Logos and Badges</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">21</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-stream-packs" name="category_stream-packs">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-stream-packs">Stream Packs</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">197</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX ITEMS &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX TITLE &ndash;&gt;-->
+          <!--<p class="sidebar-box-title">Files Included</p>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX ITEMS &ndash;&gt;-->
+          <!--<div class="sidebar-box-items">-->
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-photoshop" name="category_photoshop">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-photoshop">Photoshop PSD</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">785</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-illustrator" name="category_illustrator">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-illustrator">Illustrator AI</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">398</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-sketch" name="category_sketch">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-sketch">Sketch SKETCH</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">22</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-html-css" name="category_html-css">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-html-css">HTML &amp; CSS</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">566</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="checkbox" id="category-wordpress" name="wordpress">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box">-->
+                  <!--&lt;!&ndash; ICON CROSS &ndash;&gt;-->
+                  <!--<svg class="icon-cross">-->
+                    <!--<use xlink:href="#svg-cross"></use>-->
+                  <!--</svg>-->
+                  <!--&lt;!&ndash; /ICON CROSS &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="category-wordpress">WordPress</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">209</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX ITEMS &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX TITLE &ndash;&gt;-->
+          <!--<p class="sidebar-box-title">Price Range</p>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX ITEMS &ndash;&gt;-->
+          <!--<div class="sidebar-box-items small-space">-->
+            <!--&lt;!&ndash; FORM ITEM &ndash;&gt;-->
+            <!--<div class="form-item split">-->
+              <!--&lt;!&ndash; FORM INPUT &ndash;&gt;-->
+              <!--<div class="form-input small active always-active currency-decorated">-->
+                <!--<label for="price-from">From</label>-->
+                <!--<input type="text" id="price-from" name="price_from">-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /FORM INPUT &ndash;&gt;-->
+
+              <!--&lt;!&ndash; FORM INPUT &ndash;&gt;-->
+              <!--<div class="form-input small active always-active currency-decorated">-->
+                <!--<label for="price-to">To</label>-->
+                <!--<input type="text" id="price-to" name="price_to">-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /FORM INPUT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /FORM ITEM &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX ITEMS &ndash;&gt;-->
+
+          <!--&lt;!&ndash; BUTTON &ndash;&gt;-->
+          <!--<p class="button small primary">Apply Price Filter!</p>-->
+          <!--&lt;!&ndash; /BUTTON &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX TITLE &ndash;&gt;-->
+          <!--<p class="sidebar-box-title">Reviews</p>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; SIDEBAR BOX ITEMS &ndash;&gt;-->
+          <!--<div class="sidebar-box-items">-->
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap">-->
+                <!--<input type="radio" id="reviews-all" name="reviews-rating" value="reviews-all">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box round"></div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+                <!--<label for="reviews-all">All Reviews</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">1207</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap checkbox-rating">-->
+                <!--<input type="radio" id="reviews-4-up" name="reviews-rating" value="reviews-4-up" checked>-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box round"></div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+
+                <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+                <!--<div class="rating-list">-->
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+
+                <!--<label for="reviews-4-up">4 +</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">964</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap checkbox-rating">-->
+                <!--<input type="radio" id="reviews-3-up" name="reviews-rating" value="reviews-3-up">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box round"></div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+
+                <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+                <!--<div class="rating-list">-->
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+
+                <!--<label for="reviews-3-up">3 +</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">214</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap checkbox-rating">-->
+                <!--<input type="radio" id="reviews-2-up" name="reviews-rating" value="reviews-2-up">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box round"></div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+
+                <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+                <!--<div class="rating-list">-->
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+
+                <!--<label for="reviews-2-up">2 +</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">102</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; CHECKBOX LINE &ndash;&gt;-->
+            <!--<div class="checkbox-line">-->
+              <!--&lt;!&ndash; CHECKBOX WRAP &ndash;&gt;-->
+              <!--<div class="checkbox-wrap checkbox-rating">-->
+                <!--<input type="radio" id="reviews-1-up" name="reviews-rating" value="reviews-1-up">-->
+                <!--&lt;!&ndash; CHECKBOX BOX &ndash;&gt;-->
+                <!--<div class="checkbox-box round"></div>-->
+                <!--&lt;!&ndash; /CHECKBOX BOX &ndash;&gt;-->
+
+                <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+                <!--<div class="rating-list">-->
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating filled">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+                  <!--&lt;!&ndash; RATING &ndash;&gt;-->
+                  <!--<div class="rating">-->
+                    <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+                    <!--<svg class="rating-icon icon-star">-->
+                      <!--<use xlink:href="#svg-star"></use>-->
+                    <!--</svg>-->
+                    <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+                  <!--</div>-->
+                  <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+
+                <!--<label for="reviews-1-up">1 +</label>-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /CHECKBOX WRAP &ndash;&gt;-->
+
+              <!--&lt;!&ndash; CHECKBOX LINE TEXT &ndash;&gt;-->
+              <!--<p class="checkbox-line-text">76</p>-->
+              <!--&lt;!&ndash; /CHECKBOX LINE TEXT &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /CHECKBOX LINE &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /SIDEBAR BOX ITEMS &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /SIDEBAR BOX &ndash;&gt;-->
+      <!--</div>-->
       <!-- /MARKETPLACE SIDEBAR -->
 
       <!-- MARKETPLACE CONTENT -->
       <div class="marketplace-content">
         <!-- GRID -->
         <div class="grid grid-3-3-3 centered">
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
+            {% for item in items %}
+            <div class="product-preview">
             <!-- PRODUCT PREVIEW IMAGE -->
             <a href="marketplace-product.html">
               <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/01.jpg') }}" alt="item-01">
+                <img src="{{ url_for('static', filename=item['images'][0]) }}" alt="item-13">
               </figure>
             </a>
             <!-- /PRODUCT PREVIEW IMAGE -->
-        
+
             <!-- PRODUCT PREVIEW INFO -->
             <div class="product-preview-info">
               <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 12.00</p>
+              <p class="text-sticker"><span class="highlighted">$</span> {{ item['price'][0]['val'] }}</p>
               <!-- /TEXT STICKER -->
-        
+
               <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Twitch Stream UI Pack</a></p>
+              <p class="product-preview-title"><a href="#">{{ item['title'] }}</a></p>
               <!-- /PRODUCT PREVIEW TITLE -->
-        
+
               <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">Stream Packs</a></p>
+              <p class="product-preview-category digital"><a href="/category/{{item['cat']}}">{{ item['category'] }}</a></p>
               <!-- /PRODUCT PREVIEW CATEGORY -->
-        
+
               <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Awesome hexagon themed stream pack, you can change all colors and...</p>
+              <p class="product-preview-text">{{ item['caption'] }}</p>
               <!-- /PRODUCT PREVIEW TEXT -->
             </div>
             <!-- /PRODUCT PREVIEW INFO -->
-        
+
             <!-- PRODUCT PREVIEW META -->
             <div class="product-preview-meta">
               <!-- PRODUCT PREVIEW AUTHOR -->
@@ -843,17 +843,17 @@
                   <!-- /USER AVATAR CONTENT -->
                 </a>
                 <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
+
                 <!-- PRODUCT PREVIEW AUTHOR TITLE -->
                 <p class="product-preview-author-title">Posted By</p>
                 <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
+
                 <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
+                <p class="product-preview-author-text"><a href="/store/{{ item['shop_id'] }}">{{ item['shop_name'] }}</a></p>
                 <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
               </div>
               <!-- /PRODUCT PREVIEW AUTHOR -->
-        
+
               <!-- RATING LIST -->
               <div class="rating-list">
                 <!-- RATING -->
@@ -865,7 +865,7 @@
                   <!-- /RATING ICON -->
                 </div>
                 <!-- /RATING -->
-        
+
                 <!-- RATING -->
                 <div class="rating filled">
                   <!-- RATING ICON -->
@@ -875,7 +875,7 @@
                   <!-- /RATING ICON -->
                 </div>
                 <!-- /RATING -->
-        
+
                 <!-- RATING -->
                 <div class="rating filled">
                   <!-- RATING ICON -->
@@ -885,7 +885,7 @@
                   <!-- /RATING ICON -->
                 </div>
                 <!-- /RATING -->
-        
+
                 <!-- RATING -->
                 <div class="rating filled">
                   <!-- RATING ICON -->
@@ -895,7 +895,7 @@
                   <!-- /RATING ICON -->
                 </div>
                 <!-- /RATING -->
-        
+
                 <!-- RATING -->
                 <div class="rating">
                   <!-- RATING ICON -->
@@ -910,919 +910,8 @@
             </div>
             <!-- /PRODUCT PREVIEW META -->
           </div>
-          <!-- /PRODUCT PREVIEW -->
+            {% endfor %}
 
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/03.jpg') }}" alt="item-03">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 40.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Flaming Skull Team Logo</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Get this incredible horned skull logo! It's really easy to change colors with the...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/13.jpg') }}" alt="item-13">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 24.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">American Football Team Page</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Perfect template for American Football teams, with all you need, like results...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/05.jpg') }}" alt="item-05">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 24.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Emerald Dragon Digital Marketpl...</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Digital marketplace HTML template with all you need to build your own web...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/09.jpg') }}" alt="item-09">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 5.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 01</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/08.jpg') }}" alt="item-08">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 5.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 02</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/10.jpg') }}" alt="item-10">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 26.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Pixel Diamond Gaming Magazine</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Awesome HTML template for eSports and gaming! Also includes a forum...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/11.jpg') }}" alt="item-11">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 6.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Gaming Coin Badges Pack</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Very detailed gaming coin illustration badges, perfect for forums and...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/03.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Nick Grissom</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
-
-          <!-- PRODUCT PREVIEW -->
-          <div class="product-preview">
-            <!-- PRODUCT PREVIEW IMAGE -->
-            <a href="marketplace-product.html">
-              <figure class="product-preview-image liquid">
-                <img src="{{ url_for('static', filename='img/marketplace/items/14.jpg') }}" alt="item-14">
-              </figure>
-            </a>
-            <!-- /PRODUCT PREVIEW IMAGE -->
-        
-            <!-- PRODUCT PREVIEW INFO -->
-            <div class="product-preview-info">
-              <!-- TEXT STICKER -->
-              <p class="text-sticker"><span class="highlighted">$</span> 26.00</p>
-              <!-- /TEXT STICKER -->
-        
-              <!-- PRODUCT PREVIEW TITLE -->
-              <p class="product-preview-title"><a href="marketplace-product.html">Asgard- Social Media Builder for...</a></p>
-              <!-- /PRODUCT PREVIEW TITLE -->
-        
-              <!-- PRODUCT PREVIEW CATEGORY -->
-              <p class="product-preview-category digital"><a href="marketplace-category.html">WP Templates</a></p>
-              <!-- /PRODUCT PREVIEW CATEGORY -->
-        
-              <!-- PRODUCT PREVIEW TEXT -->
-              <p class="product-preview-text">Incredible fullscreen design, perfect for illustrators and artists who wanna sell...</p>
-              <!-- /PRODUCT PREVIEW TEXT -->
-            </div>
-            <!-- /PRODUCT PREVIEW INFO -->
-        
-            <!-- PRODUCT PREVIEW META -->
-            <div class="product-preview-meta">
-              <!-- PRODUCT PREVIEW AUTHOR -->
-              <div class="product-preview-author">
-                <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-                <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/03.jpg') }}"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </a>
-                <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-                <p class="product-preview-author-title">Posted By</p>
-                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-        
-                <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-                <p class="product-preview-author-text"><a href="profile-timeline.html">Nick Grissom</a></p>
-                <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-              </div>
-              <!-- /PRODUCT PREVIEW AUTHOR -->
-        
-              <!-- RATING LIST -->
-              <div class="rating-list">
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-        
-                <!-- RATING -->
-                <div class="rating filled">
-                  <!-- RATING ICON -->
-                  <svg class="rating-icon icon-star">
-                    <use xlink:href="#svg-star"></use>
-                  </svg>
-                  <!-- /RATING ICON -->
-                </div>
-                <!-- /RATING -->
-              </div>
-              <!-- /RATING LIST -->
-            </div>
-            <!-- /PRODUCT PREVIEW META -->
-          </div>
-          <!-- /PRODUCT PREVIEW -->
         </div>
         <!-- /GRID -->
 
@@ -1839,7 +928,7 @@
                 <!-- /SECTION PAGER ITEM TEXT -->
               </div>
               <!-- /SECTION PAGER ITEM -->
-        
+
               <!-- SECTION PAGER ITEM -->
               <div class="section-pager-item">
                 <!-- SECTION PAGER ITEM TEXT -->
@@ -1847,7 +936,7 @@
                 <!-- /SECTION PAGER ITEM TEXT -->
               </div>
               <!-- /SECTION PAGER ITEM -->
-        
+
               <!-- SECTION PAGER ITEM -->
               <div class="section-pager-item">
                 <!-- SECTION PAGER ITEM TEXT -->
@@ -1855,7 +944,7 @@
                 <!-- /SECTION PAGER ITEM TEXT -->
               </div>
               <!-- /SECTION PAGER ITEM -->
-        
+
               <!-- SECTION PAGER ITEM -->
               <div class="section-pager-item">
                 <!-- SECTION PAGER ITEM TEXT -->
@@ -1863,7 +952,7 @@
                 <!-- /SECTION PAGER ITEM TEXT -->
               </div>
               <!-- /SECTION PAGER ITEM -->
-        
+
               <!-- SECTION PAGER ITEM -->
               <div class="section-pager-item">
                 <!-- SECTION PAGER ITEM TEXT -->
@@ -1871,7 +960,7 @@
                 <!-- /SECTION PAGER ITEM TEXT -->
               </div>
               <!-- /SECTION PAGER ITEM -->
-        
+
               <!-- SECTION PAGER ITEM -->
               <div class="section-pager-item">
                 <!-- SECTION PAGER ITEM TEXT -->
@@ -1881,7 +970,7 @@
               <!-- /SECTION PAGER ITEM -->
             </div>
             <!-- /SECTION PAGER -->
-        
+
             <!-- SECTION PAGER CONTROLS -->
             <div class="section-pager-controls">
               <!-- SLIDER CONTROL -->
@@ -1893,7 +982,7 @@
                 <!-- /SLIDER CONTROL ICON -->
               </div>
               <!-- /SLIDER CONTROL -->
-        
+
               <!-- SLIDER CONTROL -->
               <div class="slider-control right">
                 <!-- SLIDER CONTROL ICON -->
