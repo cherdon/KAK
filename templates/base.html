@@ -3,12 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!--    &lt;!&ndash; bootstrap 4.3.1 &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">-->
-<!--    &lt;!&ndash; styles &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.min.css') }}">-->
-<!--    &lt;!&ndash; simplebar styles &ndash;&gt;-->
-<!--    <link rel="stylesheet" href="{{ url_for('static', filename='css/simplebar.css') }}">-->
 
     {% block css %}
     {% endblock %}
@@ -2026,7 +2020,9 @@
         <!-- LOGO -->
         <div class="logo">
           <!-- ICON LOGO HEADER -->
-            <img src="{{ url_for('static', filename='img/marketplace-logo.png') }}" height="100px">
+            <a href="/marketplace">
+                <img src="{{ url_for('static', filename='img/kaktus.png') }}" height="70px">
+            </a>
           <!-- /ICON LOGO HEADER -->
         </div>
         <!-- /LOGO -->
