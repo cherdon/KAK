@@ -110,9 +110,7 @@ def store(name):
 def product(name):
     # Python functions
     inclusive = [
-        "Taadaa",
-        "Feature 2",
-        "Feature 10"
+        "Products made with love, provided by KAKtus!"
     ]
 
     # print(name)
