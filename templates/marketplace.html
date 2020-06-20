@@ -134,12 +134,15 @@
 
     <!-- GRID -->
     <div class="grid grid-3-3-3-3 centered">
-      <!-- PRODUCT PREVIEW -->
+
+      {% for item in items %}
+      <!--PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
         <a href="marketplace-product.html">
           <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/01.jpg') }}" alt="item-01">
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/pineapple-tarts.jpg') }}" alt="item-01">-->
+            <img src="{{ url_for('static', filename=item['image']) }}" alt="item-01">
           </figure>
         </a>
         <!-- /PRODUCT PREVIEW IMAGE -->
@@ -147,19 +150,19 @@
         <!-- PRODUCT PREVIEW INFO -->
         <div class="product-preview-info">
           <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 12.00</p>
+          <p class="text-sticker"><span class="highlighted">$</span> {{ item['price'][0]['val'] }}</p>
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Twitch Stream UI Pack</a></p>
+          <p class="product-preview-title"><a href="marketplace-product.html">{{ item['title'] }}</a></p>
           <!-- /PRODUCT PREVIEW TITLE -->
 
           <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">Stream Packs</a></p>
+          <p class="product-preview-category digital"><a href="marketplace-category.html">{{ item['category'] }}</a></p>
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Awesome hexagon themed stream pack, you can change all colors and...</p>
+          <p class="product-preview-text">{{ item['description'] }}</p>
           <!-- /PRODUCT PREVIEW TEXT -->
         </div>
         <!-- /PRODUCT PREVIEW INFO -->
@@ -246,1261 +249,1376 @@
         </div>
         <!-- /PRODUCT PREVIEW META -->
       </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/02.jpg') }}" alt="item-02">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 34.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Jaxxy Witch Black Frame</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category physical"><a href="marketplace-category.html">Art Prints</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">30x60 inches fine art print, with glossy paper and a polymer black frame...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/05.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Neko Bebop</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/03.jpg') }}" alt="item-03">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 40.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Flaming Skull Team Logo</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Get this incredible horned skull logo! It's really easy to change colors with the...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/04.jpg') }}" alt="item-04">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 29.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Carbon Black Joystick</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category physical"><a href="marketplace-category.html">Electronics</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Slightly used X-Rock Carbon model joystick. Works perfectly, like the first...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/05.jpg') }}" alt="item-05">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 24.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Emerald Dragon Digital Marketpl...</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Digital marketplace HTML template with all you need to build your own web...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/06.jpg') }}" alt="item-06">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 26.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Crimson Red Joystick</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category physical"><a href="marketplace-category.html">Electronics</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Almost new joystick! I bought it but my console gave up so I haven't used it...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/07.jpg') }}" alt="item-07">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 40.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Mercenaries White Frame</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category physical"><a href="marketplace-category.html">Art Prints</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">30x30 inches fine art print, with glossy paper and a whitewood white frame...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/05.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Neko Bebop</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/08.jpg') }}" alt="item-08">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 5.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 02</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/09.jpg') }}" alt="item-09">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 5.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 01</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/10.jpg') }}" alt="item-10">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 26.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Pixel Diamond Gaming Magazine</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Awesome HTML template for eSports and gaming! Also includes a forum...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/11.jpg') }}" alt="item-11">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 6.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Gaming Coin Badges Pack</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Very detailed gaming coin illustration badges, perfect for forums and...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/03.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Nick Grissom</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
-
-      <!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="{{ url_for('static', filename='img/marketplace/items/12.jpg') }}" alt="item-12">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> 16.00</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">Crazy Bunny Coffee Mug</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category physical"><a href="marketplace-category.html">Crafts</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">Incredible white coffee mug with the Crazy Bunny Illustration! Sizes are...</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-
-          <!-- RATING LIST -->
-          <div class="rating-list">
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating filled">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-
-            <!-- RATING -->
-            <div class="rating">
-              <!-- RATING ICON -->
-              <svg class="rating-icon icon-star">
-                <use xlink:href="#svg-star"></use>
-              </svg>
-              <!-- /RATING ICON -->
-            </div>
-            <!-- /RATING -->
-          </div>
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->
+      <!--/PRODUCT PREVIEW -->
+      {% endfor %}
+
+       <!--&lt;!&ndash;PRODUCT PREVIEW&ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/01.jpg') }}" alt="item-01">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 12.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Twitch Stream UI Pack</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">Stream Packs</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Awesome hexagon themed stream pack, you can change all colors and...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+       <!--&lt;!&ndash;/PRODUCT PREVIEW&ndash;&gt;-->
+
+       <!--&lt;!&ndash;PRODUCT PREVIEW&ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/02.jpg') }}" alt="item-02">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 34.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Jaxxy Witch Black Frame</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category physical"><a href="marketplace-category.html">Art Prints</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">30x60 inches fine art print, with glossy paper and a polymer black frame...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/05.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Neko Bebop</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+       <!--&lt;!&ndash;/PRODUCT PREVIEW&ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/03.jpg') }}" alt="item-03">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 40.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Flaming Hot Skulls</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Get this incredible horned skull logo! It's really easy to change colors with the...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/04.jpg') }}" alt="item-04">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 29.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Carbon Black Joystick</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category physical"><a href="marketplace-category.html">Electronics</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Slightly used X-Rock Carbon model joystick. Works perfectly, like the first...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/05.jpg') }}" alt="item-05">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 24.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Emerald Dragon Digital Marketpl...</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Digital marketplace HTML template with all you need to build your own web...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/06.jpg') }}" alt="item-06">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 26.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Crimson Red Joystick</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category physical"><a href="marketplace-category.html">Electronics</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Almost new joystick! I bought it but my console gave up so I haven't used it...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/07.jpg') }}" alt="item-07">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 40.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Mercenaries White Frame</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category physical"><a href="marketplace-category.html">Art Prints</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">30x30 inches fine art print, with glossy paper and a whitewood white frame...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/05.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Neko Bebop</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/08.jpg') }}" alt="item-08">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 5.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 02</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/09.jpg') }}" alt="item-09">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 5.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">People Illustrations Pack 01</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">Illustrations</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Pack that includes 6 people illustrations made with PS vectors. Photoshop files...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/02.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Destroy Dex</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/10.jpg') }}" alt="item-10">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 26.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Pixel Diamond Gaming Magazine</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">HTML Templates</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Awesome HTML template for eSports and gaming! Also includes a forum...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/01.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/11.jpg') }}" alt="item-11">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 6.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Gaming Coin Badges Pack</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category digital"><a href="marketplace-category.html">Logos &amp; Badges</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Very detailed gaming coin illustration badges, perfect for forums and...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/03.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Nick Grissom</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
+
+      <!--&lt;!&ndash; PRODUCT PREVIEW &ndash;&gt;-->
+      <!--<div class="product-preview">-->
+        <!--&lt;!&ndash; PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+        <!--<a href="marketplace-product.html">-->
+          <!--<figure class="product-preview-image liquid">-->
+            <!--<img src="{{ url_for('static', filename='img/marketplace/items/12.jpg') }}" alt="item-12">-->
+          <!--</figure>-->
+        <!--</a>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW IMAGE &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW INFO &ndash;&gt;-->
+        <!--<div class="product-preview-info">-->
+          <!--&lt;!&ndash; TEXT STICKER &ndash;&gt;-->
+          <!--<p class="text-sticker"><span class="highlighted">$</span> 16.00</p>-->
+          <!--&lt;!&ndash; /TEXT STICKER &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TITLE &ndash;&gt;-->
+          <!--<p class="product-preview-title"><a href="marketplace-product.html">Crazy Bunny Coffee Mug</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TITLE &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+          <!--<p class="product-preview-category physical"><a href="marketplace-category.html">Crafts</a></p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW CATEGORY &ndash;&gt;-->
+
+          <!--&lt;!&ndash; PRODUCT PREVIEW TEXT &ndash;&gt;-->
+          <!--<p class="product-preview-text">Incredible white coffee mug with the Crazy Bunny Illustration! Sizes are...</p>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW TEXT &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW INFO &ndash;&gt;-->
+
+        <!--&lt;!&ndash; PRODUCT PREVIEW META &ndash;&gt;-->
+        <!--<div class="product-preview-meta">-->
+          <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+          <!--<div class="product-preview-author">-->
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+            <!--<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">-->
+              <!--&lt;!&ndash; USER AVATAR CONTENT &ndash;&gt;-->
+              <!--<div class="user-avatar-content">-->
+                <!--&lt;!&ndash; HEXAGON &ndash;&gt;-->
+                <!--<div class="hexagon-image-18-20" data-src="{{ url_for('static', filename='img/avatar/04.jpg') }}"></div>-->
+                <!--&lt;!&ndash; /HEXAGON &ndash;&gt;-->
+              <!--</div>-->
+              <!--&lt;!&ndash; /USER AVATAR CONTENT &ndash;&gt;-->
+            <!--</a>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR IMAGE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+            <!--<p class="product-preview-author-title">Posted By</p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TITLE &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+            <!--<p class="product-preview-author-text"><a href="profile-timeline.html">Bearded Wonder</a></p>-->
+            <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR TEXT &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /PRODUCT PREVIEW AUTHOR &ndash;&gt;-->
+
+          <!--&lt;!&ndash; RATING LIST &ndash;&gt;-->
+          <!--<div class="rating-list">-->
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating filled">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+
+            <!--&lt;!&ndash; RATING &ndash;&gt;-->
+            <!--<div class="rating">-->
+              <!--&lt;!&ndash; RATING ICON &ndash;&gt;-->
+              <!--<svg class="rating-icon icon-star">-->
+                <!--<use xlink:href="#svg-star"></use>-->
+              <!--</svg>-->
+              <!--&lt;!&ndash; /RATING ICON &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; /RATING &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /RATING LIST &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; /PRODUCT PREVIEW META &ndash;&gt;-->
+      <!--</div>-->
+      <!--&lt;!&ndash; /PRODUCT PREVIEW &ndash;&gt;-->
     </div>
     <!-- /GRID -->
   </div>

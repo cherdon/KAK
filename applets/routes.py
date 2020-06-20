@@ -2,6 +2,7 @@ from applets import app
 from flask import request, render_template, redirect, url_for, flash
 interface = app.config['INTERFACE']
 stores = app.config['STOREDB']
+items = app.config['ITEMSDB']
 
 
 # # HOME PAGE
@@ -37,6 +38,7 @@ def marketplace():
     # Python functions
     return render_template('marketplace.html',
                            interface=interface,
+                           items=items['items'],
                            title="Marketplace")
 
 
