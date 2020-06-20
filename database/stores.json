@@ -5,5 +5,20 @@
     "handle": "@laceandribbons",
     "items": 5,
     "followers": 102,
+    "reviews": 10},
+  "2":
+  {"id": 2,
+    "name": "The Donnut Shop",
+    "handle": "@thedonnut.shop",
+    "items": 4,
+    "followers": 276,
+    "reviews": 11,
+    "image": "img/store/02.png"},
+  "3":
+  {"id": 3,
+    "name": "The Long table",
+    "handle": "@laceandribbons",
+    "items": 5,
+    "followers": 102,
     "reviews": 10}
 }
