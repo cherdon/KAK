@@ -1,0 +1,47 @@
+{
+  "1":
+    {"id": 1,
+    "name": "Jumkey",
+    "handle": "@jumkeyclub",
+    "items": 5,
+    "followers": 102,
+    "reviews": 10,
+    "image": "img/store/01.png",
+    "avatar": "img/avatar/01.jpg"},
+  "2":
+    {"id": 2,
+    "name": "The Donnut Shop",
+    "handle": "@thedonnutshop",
+    "items": 4,
+    "followers": 276,
+    "reviews": 11,
+    "image": "img/store/02.png",
+    "avatar": "img/avatar/03.jpg"},
+  "3":
+    {"id": 3,
+    "name": "The Long table",
+    "handle": "@thelongtablesg",
+    "items": 8,
+    "followers": 169,
+    "reviews": 5,
+    "image": "img/store/03.jpg",
+    "avatar": "img/avatar/02.jpg"},
+  "4":
+    {"id": 4,
+    "name": "Sweet and Sassy",
+    "handle": "@sweetandsassy",
+    "items": 6,
+    "followers": 77,
+    "reviews": 3,
+    "image": "img/store/04.png",
+    "avatar": "img/avatar/04.jpg"},
+  "5":
+    {"id": 5,
+    "name": "Dust and pearls",
+    "handle": "@vanee_k",
+    "items": 3,
+    "followers": 363,
+    "reviews": 4,
+    "image": "img/store/05.jpg",
+    "avatar": "img/avatar/03.jpg"}
+}
