@@ -13,6 +13,24 @@ stores = app.config['STOREDB']
 #     return render_template('index.html', variables=variables)
 
 
+# 404 Not Found
+@app.route('/404', methods=['GET'])
+def error():
+    # Python functions
+    return render_template('404.html',
+                           interface=interface,
+                           title="Not Found")
+
+
+# Login
+@app.route('/login', methods=['GET'])
+def login():
+    # Python functions
+    return render_template('login.html',
+                           interface=interface,
+                           title="Login")
+
+
 # Marketplace
 @app.route('/marketplace', methods=['GET'])
 def marketplace():
@@ -42,4 +60,4 @@ def store(name):
                                title="Store")
     else:
         # TODO redirect to 404 page
-        return redirect(url_for('marketplace'))
+        return redirect(url_for('error'))
